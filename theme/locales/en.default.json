@@ -537,9 +537,9 @@
     "caption": "Street photographs / Lena"
   },
   "editorial": {
-    "women": "Women / Lena",
-    "men": "Men / Steven",
-    "women_alt": "Exodus street photographs with Lena",
-    "men_alt": "Exodus sample photographs with Steven"
+    "women": "Women",
+    "men": "Men",
+    "women_alt": "Exodus street photographs",
+    "men_alt": "Exodus sample photographs"
   }
 }

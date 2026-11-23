@@ -537,9 +537,9 @@
     "caption": "街头实拍 / Lena"
   },
   "editorial": {
-    "women": "女装 / Lena",
-    "men": "男装 / Steven",
-    "women_alt": "Lena 的 Exodus 户外街拍",
-    "men_alt": "Steven 的 Exodus 样衣实拍"
+    "women": "女装",
+    "men": "男装",
+    "women_alt": "Exodus 户外街拍",
+    "men_alt": "Exodus 样衣实拍"
   }
 }

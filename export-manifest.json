@@ -578,8 +578,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 20573,
-      "sha256": "f85ad2c772bdabba7986a1c6162446517045fd0962b45c0515c975d1b67e71e1"
+      "bytes": 20367,
+      "sha256": "6f47e5411a84f4719cde0e43e1827f9fe33326c0df42ae73571e2e3cdb581730"
     },
     {
       "path": "docs/pages/about/index.html",
@@ -728,8 +728,8 @@
     },
     {
       "path": "docs/zh-cn/index.html",
-      "bytes": 20471,
-      "sha256": "72ee0165d1fa754de7c71276dfd1cf75360e80d33971aa71be38344a87911b95"
+      "bytes": 20275,
+      "sha256": "44a4c8e2674de2fdf5aaf1b87b0da474134dca9170f2b7446cebae5cfb6c0d21"
     },
     {
       "path": "docs/zh-cn/pages/about/index.html",
@@ -1413,13 +1413,13 @@
     },
     {
       "path": "theme/locales/en.default.json",
-      "bytes": 28982,
-      "sha256": "f01a736e23eda7abbe03262670ef206f16db50c72e36565caab64ec31a465255"
+      "bytes": 28944,
+      "sha256": "d77ee6e9aa1f4a047e1c649fc4d0e5cf246eac91667e4f9981c8469bd9cb6d6e"
     },
     {
       "path": "theme/locales/zh-CN.json",
-      "bytes": 27185,
-      "sha256": "2a43607200045d5c94ef08c240c2737967e061b2dbb92374e654103e5deed4c4"
+      "bytes": 27149,
+      "sha256": "67e73d19e0803c36c8fa8e142d496fbc024f2e05978de600f76f6e911cf9c3d2"
     },
     {
       "path": "theme/sections/about.liquid",
