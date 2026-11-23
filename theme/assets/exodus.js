@@ -29,8 +29,10 @@ if (productBack) {
   const search = new URL(productBack.dataset.searchPath, location.origin);
   const referrer = document.referrer ? new URL(document.referrer) : null;
   if (referrer?.origin === location.origin) {
-    if (referrer.pathname === collection.pathname) catalogReturn = {kind:'collection', query:referrer.search};
-    if (referrer.pathname === search.pathname) catalogReturn = {kind:'search', query:referrer.search};
+    // Static hosts may add a trailing slash to directory routes.
+    const samePath = (a, b) => a.replace(/\/+$/, '') === b.replace(/\/+$/, '');
+    if (samePath(referrer.pathname, collection.pathname)) catalogReturn = {kind:'collection', query:referrer.search};
+    if (samePath(referrer.pathname, search.pathname)) catalogReturn = {kind:'search', query:referrer.search};
   }
   if (productHandle) {
     let pending;

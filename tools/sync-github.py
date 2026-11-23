@@ -18,6 +18,7 @@ def run(cmd,cwd):
     subprocess.run(cmd,cwd=cwd,check=True)
 run(['npm.cmd','run','preview:build'],source/'storefront')
 run(['node','tools/verify-sample-search.mjs'],source/'storefront')
+run(['npm.cmd','run','check','--','--output','json'],source/'storefront')
 policy=json.loads((source/'project-management/website/assets/media-clearance.json').read_text(encoding='utf-8'))
 allowed={e['file']:e['sha256'] for e in policy['allowed_delivery_media']}
 repo.mkdir(parents=True,exist_ok=True)
@@ -48,7 +49,7 @@ with tempfile.TemporaryDirectory(prefix='exodus-public-') as temp:
         if not item.is_file(): continue
         rel=item.relative_to(source/'storefront/preview')
         if '__fixtures' in rel.parts or 'gallery-study' in rel.parts: continue
-        if item.suffix not in ['.html','.js','.css','.jpg','.jpeg','.png','.webp','.avif','.gif','.mp4','.webm','.svg','.glb','.gltf','.otf','.ttf']: continue
+        if item.suffix not in ['.html','.js','.css','.jpg','.jpeg','.png','.webp','.avif','.gif','.mp4','.webm','.svg','.glb','.gltf','.otf','.ttf','.txt']: continue
         target=stage/'docs'/rel
         target.parent.mkdir(parents=True,exist_ok=True)
         if item.suffix=='.html':
@@ -62,7 +63,6 @@ with tempfile.TemporaryDirectory(prefix='exodus-public-') as temp:
             pages+=1
         elif rel.as_posix()=='preview-only.js':
             text=item.read_text(encoding='utf-8')
-            text=text.replace("location.pathname.replace(/^/","location.pathname.replace(/^/",1)
             text=text.replace("const base=url.pathname.replace(", "const base=url.pathname.slice("+str(len(base))+").replace(")
             text=text.replace("url.pathname=(lang", "url.pathname='"+base+"'+(lang")
             target.write_text(text,encoding='utf-8')

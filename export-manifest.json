@@ -378,8 +378,13 @@
     },
     {
       "path": "docs/assets/exodus.js",
-      "bytes": 7685,
-      "sha256": "2b51e6e8e719e1251e6697a331a347648bf5fb9059486b3c1d8c26fb832fb7e1"
+      "bytes": 7847,
+      "sha256": "a40fcfe4af556a64d26831631255b475f4a57b21477531f632a644be7abe3bed"
+    },
+    {
+      "path": "docs/assets/golden-girdle-LICENSE.txt",
+      "bytes": 536,
+      "sha256": "e5288a010dd172450da7610696671ba5f93d71f0459020380f3462e5e9257923"
     },
     {
       "path": "docs/assets/golden-girdle.otf",
@@ -400,6 +405,11 @@
       "path": "docs/assets/image-viewer.js",
       "bytes": 5811,
       "sha256": "746083adf5bb7f4fb31ad0ec4a5e7fbfe2c074f26a893799c06545ec9753eb3b"
+    },
+    {
+      "path": "docs/assets/model-viewer-LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
     },
     {
       "path": "docs/assets/model-viewer.min.js",
@@ -475,6 +485,11 @@
       "path": "docs/assets/unifrakturcook-bold.ttf",
       "bytes": 42688,
       "sha256": "ea002fa9c65f1a612af100e00d87ab65f16381f450020ec3d021f3dbf79a6dcd"
+    },
+    {
+      "path": "docs/assets/unifrakturcook-OFL.txt",
+      "bytes": 4413,
+      "sha256": "99d2f30e282d6174af8ff68597f58bb53c0dcb2b104a4c1b8d19da49021d00d3"
     },
     {
       "path": "docs/cart/index.html",
@@ -1173,8 +1188,8 @@
     },
     {
       "path": "theme/assets/exodus.js",
-      "bytes": 7685,
-      "sha256": "2b51e6e8e719e1251e6697a331a347648bf5fb9059486b3c1d8c26fb832fb7e1"
+      "bytes": 7847,
+      "sha256": "a40fcfe4af556a64d26831631255b475f4a57b21477531f632a644be7abe3bed"
     },
     {
       "path": "theme/assets/golden-girdle-LICENSE.txt",
@@ -1523,8 +1538,8 @@
     },
     {
       "path": "tools/sync-github.py",
-      "bytes": 7697,
-      "sha256": "8b4e0ce66991e4808a72fd6852202ff9657bc14ec5169f72eaac65c793e76ee0"
+      "bytes": 7681,
+      "sha256": "1ef0872789638270ffd311a959368ec25e49e9784e2abd9825726e132394668d"
     }
   ]
 }
