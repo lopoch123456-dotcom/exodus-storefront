@@ -7,6 +7,11 @@
   "shopify_connected": false,
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 9,
+      "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
       "path": ".gitignore",
       "bytes": 47,
       "sha256": "07b72e60daf7f67a50778ff0acd2b28ffbe3f06451f8268183ff60a85aede726"
@@ -1538,8 +1543,8 @@
     },
     {
       "path": "tools/sync-github.py",
-      "bytes": 7681,
-      "sha256": "1ef0872789638270ffd311a959368ec25e49e9784e2abd9825726e132394668d"
+      "bytes": 7769,
+      "sha256": "26fce131bce38f8ed54e4bbe5e7bff06f6f907995391f6afb3db031f9d636ad7"
     }
   ]
 }

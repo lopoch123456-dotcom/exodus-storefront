@@ -73,6 +73,7 @@ with tempfile.TemporaryDirectory(prefix='exodus-public-') as temp:
             shutil.copy2(item,target)
     (stage/'docs/.nojekyll').write_text('')
     (stage/'docs/robots.txt').write_text('User-agent: *\nDisallow: /\n')
+    (stage/'.gitattributes').write_text('* -text\n')
     (stage/'.gitignore').write_text('node_modules/\n.env*\n*.zip\n*.log\n.DS_Store\n')
     (stage/'README.md').write_text("""# Exodus storefront
 
@@ -113,11 +114,11 @@ Never force-push or commit credentials.
             assert target.resolve().parent==repo and not target.is_symlink()
             shutil.rmtree(target)
         shutil.copytree(stage/name,target)
-    for name in ['README.md','.gitignore','export-manifest.json']:shutil.copy2(stage/name,repo/name)
+    for name in ['README.md','.gitignore','.gitattributes','export-manifest.json']:shutil.copy2(stage/name,repo/name)
 if not (repo/'.git').exists():
     run(['git','init','-b','main'],repo)
     run(['git','remote','add','origin',expected_remote],repo)
-run(['git','add','--','theme','docs','tools','README.md','.gitignore','export-manifest.json'],repo)
+run(['git','add','--','theme','docs','tools','README.md','.gitignore','.gitattributes','export-manifest.json'],repo)
 diff=subprocess.run(['git','diff','--cached','--quiet'],cwd=repo)
 if diff.returncode==1:
     run(['git','commit','--quiet','-m','Update Exodus theme and preview '+manifest['date_vancouver']],repo)
