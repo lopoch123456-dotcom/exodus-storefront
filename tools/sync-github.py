@@ -120,7 +120,7 @@ if not (repo/'.git').exists():
 run(['git','add','--','theme','docs','tools','README.md','.gitignore','export-manifest.json'],repo)
 diff=subprocess.run(['git','diff','--cached','--quiet'],cwd=repo)
 if diff.returncode==1:
-    run(['git','commit','-m','Update Exodus theme and preview '+manifest['date_vancouver']],repo)
+    run(['git','commit','--quiet','-m','Update Exodus theme and preview '+manifest['date_vancouver']],repo)
 elif diff.returncode!=0: raise RuntimeError('Git diff failed')
 if args.push:
     run(['git','push','--set-upstream','origin','main'],repo)

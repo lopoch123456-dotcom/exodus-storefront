@@ -1523,8 +1523,8 @@
     },
     {
       "path": "tools/sync-github.py",
-      "bytes": 7687,
-      "sha256": "9806a95a08e9d55768c891c0f6d1bccd7978643b7a2386e33ddf64ff1de7b764"
+      "bytes": 7697,
+      "sha256": "8b4e0ce66991e4808a72fd6852202ff9657bc14ec5169f72eaac65c793e76ee0"
     }
   ]
 }
