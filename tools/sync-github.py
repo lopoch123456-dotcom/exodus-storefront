@@ -56,6 +56,8 @@ with tempfile.TemporaryDirectory(prefix='exodus-public-') as temp:
             text=item.read_text(encoding='utf-8')
             text=text.replace('http://127.0.0.1:8766',origin+base)
             text=re.sub(r'(["\x27])/(?!/)',lambda m:m.group(1)+base+'/',text)
+            # Version local CSS/JS so an already-open browser loads today's design.
+            text=re.sub(r'((?:src|href|data-module-src)="[^"]*/assets/([^"?]+\.(?:js|css)))"',lambda m:m.group(1)+'?v='+hashlib.sha256((source/'storefront/theme/assets'/m.group(2)).read_bytes()).hexdigest()[:12]+'"',text)
             text=text.replace('<meta name="viewport"','<meta name="robots" content="noindex,nofollow"><meta name="viewport"',1)
             assert '/__fixtures/' not in text,rel
             assert 'TEST FIXTURE' not in text,rel
