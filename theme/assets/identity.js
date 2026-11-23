@@ -102,32 +102,3 @@ document.querySelectorAll('[data-archive-motion]').forEach(video=>{
 });
 
 
-/* Street photography carousel: no sound, pauses for interaction, visibility and reduced motion. */
-document.querySelectorAll('[data-street-carousel]').forEach(carousel=>{
- const frames=[...carousel.querySelectorAll('[data-street-frame]')];
- const controls=carousel.querySelector('[data-street-controls]');
- const play=carousel.querySelector('[data-street-play]');
- const counter=carousel.querySelector('[data-street-count]');
- const reduced=matchMedia('(prefers-reduced-motion:reduce)');
- let index=0,paused=reduced.matches,hovered=false,visible=false,timer;
- function schedule(){
-  clearTimeout(timer);
-  play.setAttribute('aria-pressed',String(paused));play.textContent=paused?play.dataset.playLabel:play.dataset.pauseLabel;
-  if(!paused&&!hovered&&visible&&!document.hidden&&!carousel.contains(document.activeElement))timer=setTimeout(()=>{show(index+1);},6000);
- }
- function show(next){index=(next+frames.length)%frames.length;frames.forEach((frame,i)=>frame.hidden=i!==index);counter.textContent=String(index+1).padStart(2,'0')+' / '+String(frames.length).padStart(2,'0');schedule();}
- carousel.querySelector('[data-street-next]').addEventListener('click',()=>{paused=true;show(index+1);});
- carousel.querySelector('[data-street-previous]').addEventListener('click',()=>{paused=true;show(index-1);});
- play.addEventListener('click',()=>{paused=!paused;schedule();});
- carousel.addEventListener('pointerenter',()=>{hovered=true;schedule();});
- carousel.addEventListener('pointerleave',()=>{hovered=false;schedule();});
- carousel.addEventListener('focusin',schedule);
- carousel.addEventListener('focusout',()=>setTimeout(schedule,0));
- let touchX;
- carousel.addEventListener('touchstart',event=>{touchX=event.changedTouches[0].clientX;},{passive:true});
- carousel.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-touchX;if(Math.abs(distance)>55){paused=true;show(index+(distance<0?1:-1));}},{passive:true});
- document.addEventListener('visibilitychange',schedule);
- reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;schedule();});
- new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:.2}).observe(carousel);
- controls.hidden=false;show(0);
-});

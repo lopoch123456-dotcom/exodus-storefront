@@ -505,7 +505,8 @@
     "denim_original_graphic": "Sample photograph, close-up of the outer-leg print.",
     "hood_actual_closeup": "Sample close-up showing the hood trim, chest graphic and zip.",
     "flametee_actual_layered": "Actual sample photo showing the black-and-red chest print. The long sleeves belong to the waffle Henley layered underneath.",
-    "henley_lena": "Real street photograph of Lena wearing the white waffle Henley"
+    "henley_lena": "Real street photograph of Lena wearing the white waffle Henley",
+    "ai_mockup": "AI product mockup"
   },
   "catalog_look": {
     "show": "On model",
@@ -534,5 +535,11 @@
     "pause": "Pause slideshow",
     "play": "Play slideshow",
     "caption": "Street photographs / Lena"
+  },
+  "editorial": {
+    "women": "Women / Lena",
+    "men": "Men / Steven",
+    "women_alt": "Exodus street photographs with Lena",
+    "men_alt": "Exodus sample photographs with Steven"
   }
 }
