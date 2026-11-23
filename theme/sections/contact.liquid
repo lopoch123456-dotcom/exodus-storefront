@@ -1,0 +1,11 @@
+<section class="section-pad content-page"><p class="eyebrow">{{ 'ui.contact_eyebrow' | t | escape }}</p><h1>{{ 'ui.contact_title' | t | escape }}</h1><p>{{ 'ui.contact_intro' | t | escape }}</p>
+{% form 'contact', id: 'ContactForm' %}
+{% if form.posted_successfully? %}<p role="status">{{ 'ui.contact_success' | t | escape }}</p>{% endif %}{% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+<label for="ContactName">{{ 'ui.name' | t | escape }}</label><input id="ContactName" name="contact[name]" autocomplete="name" required>
+<label for="ContactEmail">{{ 'ui.email' | t | escape }}</label><input id="ContactEmail" name="contact[email]" type="email" autocomplete="email" required>
+<label for="ContactMessage">{{ 'ui.message' | t | escape }}</label><textarea id="ContactMessage" name="contact[body]" rows="6" required></textarea>
+<button class="button" type="submit">{{ 'ui.send' | t | escape }}</button><p data-preview-status role="status"></p>
+{% endform %}</section>
+{% schema %}
+{"name":"Contact","settings":[]}
+{% endschema %}

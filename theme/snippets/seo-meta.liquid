@@ -1,0 +1,51 @@
+{%- liquid
+  assign meta_base_title = page_title | default: shop.name
+  assign meta_description = page_description | default: shop.description
+  if meta_description == blank
+    assign meta_description = 'ui.meta_description' | t
+  endif
+  assign meta_url = canonical_url | default: request.origin
+  assign meta_image = page_image | default: settings.social_image
+  assign meta_image_alt = meta_image.alt | default: shop.name
+  if meta_image != blank
+    assign meta_image_url = meta_image | image_url: width: 1200
+  else
+    assign meta_image_url = 'sample-tee.jpg' | asset_url
+    assign meta_image_alt = 'ui.alt_tee' | t
+  endif
+  assign meta_image_prefix = meta_image_url | slice: 0, 2
+  if meta_image_prefix == '//'
+    assign meta_image_url = meta_image_url | prepend: 'https:'
+  elsif meta_image_url contains '://'
+  else
+    assign meta_image_url = meta_image_url | prepend: request.origin
+  endif
+  assign meta_type = 'website'
+  if request.page_type == 'product'
+    assign meta_type = 'product'
+  endif
+-%}
+{%- capture meta_title -%}
+{{ meta_base_title }}{% if current_tags != blank %} - {{ current_tags | join: ', ' }}{% endif %}{% if current_page > 1 %} - {{ 'seo.page' | t: number: current_page }}{% endif %}{% unless meta_base_title contains shop.name %} | {{ shop.name }}{% endunless %}
+{%- endcapture -%}
+<title>{{ meta_title | strip | escape }}</title>
+<meta name="description" content="{{ meta_description | strip_html | strip | escape }}">
+<link rel="canonical" href="{{ meta_url | escape }}">
+{% if settings.sample_mode or request.design_mode %}
+<meta name="robots" content="noindex,nofollow">
+{% elsif request.page_type == 'cart' or request.page_type == 'search' or request.page_type == '404' %}
+<meta name="robots" content="noindex,follow">
+{% endif %}
+<meta property="og:site_name" content="{{ shop.name | escape }}">
+<meta property="og:url" content="{{ meta_url | escape }}">
+<meta property="og:title" content="{{ meta_title | strip | escape }}">
+<meta property="og:type" content="{{ meta_type }}">
+<meta property="og:description" content="{{ meta_description | strip_html | strip | escape }}">
+<meta property="og:image" content="{{ meta_image_url | escape }}">
+<meta property="og:image:alt" content="{{ meta_image_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title | strip | escape }}">
+<meta name="twitter:description" content="{{ meta_description | strip_html | strip | escape }}">
+<meta name="twitter:image" content="{{ meta_image_url | escape }}">
+<meta name="twitter:image:alt" content="{{ meta_image_alt | escape }}">
+{% if settings.favicon != blank %}<link rel="icon" href="{{ settings.favicon | image_url: width: 32, height: 32 | escape }}">{% endif %}

@@ -1,0 +1,15 @@
+<section class="archive-looks section-pad" id="ArchiveLooks" aria-labelledby="ArchiveLooksTitle">
+  <div class="archive-looks-intro"><h2 id="ArchiveLooksTitle">{{ 'identity.archive_title' | t | escape }}</h2><p>{{ 'identity.archive_copy' | t | escape }}</p></div>
+  <div class="archive-look-grid">
+    {% assign look_ids = 'black,olive,white' | split: ',' %}
+    {% for look in look_ids %}
+      {% assign look_file = 'archive-' | append: look | append: '-set-ai-v1.jpg' %}
+      {% if look == 'white' %}{% assign look_file = 'archive-white-set-ai-v2.jpg' %}{% endif %}
+      {% assign look_key = 'identity.look_' | append: look %}
+      <figure>
+        <button type="button" data-view-image="{{ look_file | asset_url }}" data-caption="{{ 'identity.ai_caption' | t | escape }}"><img src="{{ look_file | asset_url }}" width="1122" height="1402" loading="lazy" alt="{{ look_key | t | escape }}"></button>
+        <figcaption><h3>{{ look_key | t | escape }}</h3><p>{{ 'identity.ai_short' | t | escape }}</p></figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</section>

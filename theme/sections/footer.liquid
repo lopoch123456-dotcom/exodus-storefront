@@ -1,0 +1,18 @@
+<footer class="site-footer section-pad">
+  <div class="footer-top"><div><p class="eyebrow">{{ 'ui.stay' | t | escape }}</p><h2>{{ 'ui.next_chapter' | t | escape }}<br>{{ 'ui.inbox' | t | escape }}</h2><p>{{ 'ui.news' | t | escape }}</p></div><div class="newsletter">
+    {% form 'customer', id: 'NewsletterForm' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <label for="NewsletterEmail">{{ 'ui.email_address' | t | escape }}</label>
+      <div class="input-row"><input type="email" name="contact[email]" id="NewsletterEmail" autocomplete="email" placeholder="{{ 'ui.email_placeholder' | t | escape }}" required><button type="submit" aria-label="{{ 'ui.subscribe_accessible' | t | escape }}">{{ 'ui.signup' | t | escape }}</button></div>
+      {% if form.posted_successfully? %}<p role="status">{{ 'ui.signup_success' | t | escape }}</p>{% endif %}
+      {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+      <p class="form-note">{{ 'ui.signup_consent' | t | escape }}</p>
+      <p data-preview-status role="status"></p>
+    {% endform %}
+  </div></div>
+  <div class="footer-links"><a href="{{ routes.all_products_collection_url }}">{{ 'ui.collection' | t | escape }}</a><a href="{{ routes.root_url }}pages/lookbook">{{ 'ui.journal' | t | escape }}</a><a href="{{ routes.root_url }}pages/about">{{ 'ui.about' | t | escape }}</a><a href="{{ routes.root_url }}pages/contact">{{ 'ui.contact' | t | escape }}</a>{% for policy in shop.policies %}{% if policy.body != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}</div>
+  <img class="footer-brand-mark" src="{{ 'brand-emblem-original.png' | asset_url }}" width="44" height="38" alt="" loading="lazy"><div class="footer-wordmark" aria-hidden="true">EXODUS</div><div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</span><span>{{ 'ui.independent' | t | escape }}</span><a href="#MainContent">{{ 'ui.back_top' | t | escape }}</a></div>
+</footer>
+{% schema %}
+{"name":"Exodus footer","settings":[]}
+{% endschema %}

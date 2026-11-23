@@ -1,0 +1,19 @@
+<section class="page-intro section-pad"><p class="eyebrow">{{ 'ui.photo_journal' | t | escape }}</p><h1>{{ 'retail.campaign_heading' | t | escape }}</h1><p>{{ 'retail.campaign_intro' | t | escape }}</p></section>
+
+
+<section class="journal-grid section-pad" aria-label="{{ 'ui.sample_photos' | t | escape }}">
+  <button class="journal-frame" type="button" data-view-image="{{ 'sample-hood.jpg' | asset_url }}" data-caption="{{ 'ui.caption_01' | t | escape }}"><img src="{{ 'sample-hood.jpg' | asset_url }}" width="1200" height="1824" alt="{{ 'ui.alt_hood' | t | escape }}"><span>{{ 'ui.city_light' | t | escape }} <span>{{ 'ui.enlarge' | t | escape }}</span></span></button>
+  <button class="journal-frame" type="button" data-view-image="{{ 'sample-detail.jpg' | asset_url }}" data-caption="{{ 'ui.caption_02' | t | escape }}"><img src="{{ 'sample-detail.jpg' | asset_url }}" width="1200" height="1800" alt="{{ 'ui.alt_close' | t | escape }}" loading="lazy"><span>{{ 'ui.closer' | t | escape }} <span>{{ 'ui.enlarge' | t | escape }}</span></span></button>
+  <button class="journal-frame" type="button" data-view-image="{{ 'sample-ride.jpg' | asset_url }}" data-caption="{{ 'ui.caption_03' | t | escape }}"><img src="{{ 'sample-ride.jpg' | asset_url }}" width="1200" height="1800" alt="{{ 'ui.alt_helmet' | t | escape }}" loading="lazy"><span>{{ 'ui.transit' | t | escape }} <span>{{ 'ui.enlarge' | t | escape }}</span></span></button>
+  <button class="journal-frame" type="button" data-view-image="{{ 'sample-tee.jpg' | asset_url }}" data-caption="{{ 'ui.caption_04' | t | escape }}"><img src="{{ 'sample-tee.jpg' | asset_url }}" width="1200" height="800" alt="{{ 'ui.alt_tee' | t | escape }}" loading="lazy"><span>{{ 'ui.impressions' | t | escape }} <span>{{ 'ui.enlarge' | t | escape }}</span></span></button>
+</section>
+{% render 'archive-looks' %}
+<section class="motion-exhibit section-pad" aria-labelledby="MotionTitle">
+  <div class="motion-heading"><h2 id="MotionTitle">{{ 'retail.motion_title' | t | escape }}</h2><p>{{ 'identity.motion_copy' | t | escape }}</p></div>
+  <video data-archive-motion controls playsinline muted loop preload="none" poster="{{ 'archive-motion-poster-v1.jpg' | asset_url }}" aria-label="{{ 'identity.motion_alt' | t | escape }}"><source src="{{ 'archive-motion-silent-v1.mp4' | asset_url }}" type="video/mp4"><p>{{ 'identity.video_fallback' | t | escape }}</p></video>
+  <div class="motion-actions"><button type="button" data-toggle-motion data-play-label="{{ 'identity.play_film' | t | escape }}" data-pause-label="{{ 'identity.pause_film' | t | escape }}">{{ 'identity.play_film' | t | escape }}</button><span>{{ 'identity.silent' | t | escape }}</span><p data-motion-status role="status" aria-live="polite" data-error-label="{{ 'identity.video_error' | t | escape }}"></p></div>
+</section>
+
+{% schema %}
+{"name":"Photographic journal","settings":[]}
+{% endschema %}

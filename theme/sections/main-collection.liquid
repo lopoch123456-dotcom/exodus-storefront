@@ -1,0 +1,17 @@
+{% assign collection_default_title = 'ui.collection_title' | t %}
+<section class="section-pad catalog-page"><div class="section-heading"><h1>{{ collection.title | default: collection_default_title | escape }}</h1>{% unless settings.sample_mode or collection.description == blank %}<p class="section-note">{{ collection.description | strip_html | escape }}</p>{% endunless %}</div>
+{% if settings.sample_mode %}{% render 'sample-catalog-controls' %}{% render 'sample-grid', routes: routes %}{% else %}
+{% assign sort_value = collection.sort_by | default: collection.default_sort_by %}
+{% capture clear_url %}{{ collection.url }}?sort_by={{ sort_value | url_encode }}{% endcapture %}
+<div class="catalog-layout">
+  {% render 'catalog-controls', results: collection, base_url: collection.url, clear_url: clear_url, section: section, cart: cart %}
+  <div class="catalog-results"><p class="catalog-count" role="status">{{ 'catalog.count' | t: count: collection.products_count | escape }}</p>
+  {% render 'active-filters', results: collection %}
+  {% paginate collection.products by 24 %}
+    <div class="product-grid commerce-grid">{% for product in collection.products %}{% render 'product-card', product: product, allow_look: true %}{% else %}<div class="catalog-empty"><h2>{{ 'catalog.empty' | t | escape }}</h2><p>{{ 'catalog.try_filters' | t | escape }}</p>{% render 'catalog-reset', results: collection, clear_url: clear_url %}</div>{% endfor %}</div>
+    {% render 'catalog-pagination', pagination: paginate %}
+  {% endpaginate %}</div>
+</div>{% endif %}</section>
+{% schema %}
+{"name":"Collection","settings":[]}
+{% endschema %}

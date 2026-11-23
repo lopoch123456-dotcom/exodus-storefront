@@ -1,0 +1,6 @@
+{% assign default_look_alt = 'catalog_look.alt' | t %}
+{% assign look_kind_key = 'catalog_look.' | append: kind %}
+<template data-catalog-look-template>
+  <img class="catalog-look-image" src="{{ url | escape }}" width="{{ width }}" height="{{ height }}" alt="{{ alt | default: default_look_alt | escape }}" aria-hidden="true" decoding="async">
+  <span class="catalog-look-kind" aria-hidden="true">{{ look_kind_key | t | escape }}</span>
+</template>

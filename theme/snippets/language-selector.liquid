@@ -1,0 +1,14 @@
+{% if localization.available_languages.size > 1 %}
+<div class="language-bar">
+  <span>{{ 'ui.language' | t | escape }}</span>
+  {% form 'localization', id: 'LanguageForm', return_to: request.path %}
+    <div class="language-options" role="group" aria-label="{{ 'ui.switch_language' | t | escape }}">
+      {% for language in localization.available_languages %}
+        {% if language.iso_code == 'en' or language.iso_code == 'zh-CN' %}
+          <button type="submit" name="language_code" value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}disabled aria-current="true"{% endif %}>{% if language.iso_code == 'en' %}EN{% else %}中文{% endif %}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endform %}
+</div>
+{% endif %}

@@ -1,0 +1,39 @@
+{% assign has_look = false %}
+{% if allow_look and product.featured_image != blank %}
+  {% assign look_media = product.metafields.custom.catalog_look_image.value %}
+  {% assign look_kind = product.metafields.custom.catalog_look_kind.value %}
+  {% assign known_look_kinds = 'photo,ai,design' | split: ',' %}
+  {% if look_media.media_type == 'image' and look_media.preview_image != blank and known_look_kinds contains look_kind %}
+    {% assign has_look = true %}
+    {% assign look_photo = look_media.preview_image %}
+    {% assign look_url = look_photo | image_url: width: 1000 %}
+  {% endif %}
+{% endif %}
+{% if has_look %}<div class="catalog-card-slot" data-catalog-look>{% endif %}
+<a class="sample-card product-card" href="{{ product.url | escape }}">
+  <div class="sample-picture">
+    {% if product.featured_image %}
+      {% assign image_alt = product.featured_image.alt | default: product.title %}
+      {% assign cover_sizes = '(min-width: 1024px) 24vw, (min-width: 768px) 38vw, 46vw' %}
+      {% if allow_look %}{% assign cover_sizes = '(min-width: 960px) 33vw, 46vw' %}{% endif %}
+      {{ product.featured_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '400,700,1000', sizes: cover_sizes, alt: image_alt }}
+    {% else %}
+      <div class="product-placeholder">
+        <span class="eyebrow">EXODUS /</span>
+        <span>{{ 'catalog.photo_pending' | t | escape }}</span>
+      </div>
+    {% endif %}
+    {% if has_look %}
+      {% render 'catalog-look-image', url: look_url, width: look_photo.width, height: look_photo.height, alt: look_photo.alt, kind: look_kind %}
+    {% endif %}
+  </div>
+  <div class="sample-meta">
+    <h3>{{ product.title | escape }}</h3>
+    <span class="card-price">{% if product.price_varies %}{{ 'catalog.from' | t | escape }} {% endif %}{{ product.price | money_with_currency }}</span>
+    {% unless product.available %}<p class="catalog-card-status">{{ 'ui.sold_out' | t | escape }}</p>{% endunless %}
+  </div>
+</a>
+{% if has_look %}
+  {% render 'catalog-look-control', title: product.title %}
+</div>
+{% endif %}

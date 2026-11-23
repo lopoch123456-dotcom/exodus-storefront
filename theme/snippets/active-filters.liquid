@@ -1,0 +1,6 @@
+<div class="active-filters" aria-label="{{ 'catalog.active' | t | escape }}">
+{% for filter in results.filters %}
+  {% for value in filter.active_values %}<a href="{{ value.url_to_remove | escape }}" aria-label="{{ 'catalog.remove' | t: value: value.label | escape }}">{{ value.label | escape }} <span aria-hidden="true">×</span></a>{% endfor %}
+  {% if filter.type == 'price_range' %}{% if filter.min_value.value != nil or filter.max_value.value != nil %}<a href="{{ filter.url_to_remove | escape }}" aria-label="{{ 'catalog.remove' | t: value: filter.label | escape }}">{{ filter.label | escape }}: {{ filter.min_value.value | default: 0 | money_with_currency }} — {{ filter.max_value.value | default: filter.range_max | money_with_currency }} <span aria-hidden="true">×</span></a>{% endif %}{% endif %}
+{% endfor %}
+</div>

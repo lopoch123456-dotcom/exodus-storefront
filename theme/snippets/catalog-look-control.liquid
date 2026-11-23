@@ -1,0 +1,4 @@
+<button type="button" class="catalog-look-toggle" data-catalog-look-toggle aria-label="{{ 'catalog_look.label' | t: title: title | escape }}" aria-pressed="false" hidden>
+  {{ 'catalog_look.show' | t | escape }} <span aria-hidden="true">+</span>
+</button>
+<span class="catalog-look-status" data-catalog-look-status role="status" data-loading="{{ 'catalog_look.loading' | t | escape }}" data-error="{{ 'catalog_look.error' | t | escape }}"></span>

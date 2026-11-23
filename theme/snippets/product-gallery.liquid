@@ -1,0 +1,52 @@
+{% if product.images.size > 0 %}
+{% assign has_look = false %}
+{% assign look_label = '' %}
+{% assign matching_look_id = '' %}
+{% assign look_media = product.metafields.custom.catalog_look_image.value %}
+{% assign look_kind = product.metafields.custom.catalog_look_kind.value %}
+{% assign look_kinds = 'photo,ai,design' | split: ',' %}
+{% if look_media.media_type == 'image' and look_media.preview_image.id != blank and look_kinds contains look_kind %}
+  {% assign has_look = true %}
+  {% assign look_image = look_media.preview_image %}
+  {% assign look_label_key = 'catalog_look.' | append: look_kind %}
+  {% assign look_label = look_label_key | t %}
+  {% for image in product.images %}
+    {% if image.id == look_image.id %}
+      {% assign matching_look_id = image.id %}
+    {% elsif image.src != blank and image.src == look_image.src %}
+      {% assign matching_look_id = image.id %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign gallery_count = product.images.size %}
+{% if has_look and matching_look_id == blank %}
+  {% assign gallery_count = gallery_count | plus: 1 %}
+  {% assign appended_id = 'look-' | append: look_image.id %}
+{% endif %}
+<div class="product-gallery" data-product-gallery>
+  <div class="gallery-stage">
+    {% for image in product.images %}
+      {% assign image_look_label = '' %}
+      {% if image.id == matching_look_id %}{% assign image_look_label = look_label %}{% endif %}
+      {% render 'product-gallery-image', image: image, image_id: image.id, section_id: section.id, rotations: product.metafields.custom.gallery_rotations.value, title: product.title, first: forloop.first, number: forloop.index, look_label: image_look_label %}
+    {% endfor %}
+    {% if has_look and matching_look_id == blank %}
+      {% render 'product-gallery-image', image: look_image, image_id: appended_id, section_id: section.id, rotations: product.metafields.custom.gallery_rotations.value, title: product.title, number: gallery_count, look_label: look_label %}
+    {% endif %}
+  </div>
+  {% if gallery_count > 1 %}
+  <nav class="gallery-thumbnails" aria-label="{{ 'product_ui.gallery' | t | escape }}">
+    {% for image in product.images %}
+      {% assign image_look_label = '' %}
+      {% if image.id == matching_look_id %}{% assign image_look_label = look_label %}{% endif %}
+      {% render 'product-gallery-image', image: image, image_id: image.id, section_id: section.id, rotations: product.metafields.custom.gallery_rotations.value, title: product.title, first: forloop.first, number: forloop.index, look_label: image_look_label, thumbnail: true %}
+    {% endfor %}
+    {% if has_look and matching_look_id == blank %}
+      {% render 'product-gallery-image', image: look_image, image_id: appended_id, section_id: section.id, rotations: product.metafields.custom.gallery_rotations.value, title: product.title, number: gallery_count, look_label: look_label, thumbnail: true %}
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>
+{% else %}
+<div class="gallery-empty"><p>{{ 'product_ui.photos_pending' | t | escape }}</p></div>
+{% endif %}

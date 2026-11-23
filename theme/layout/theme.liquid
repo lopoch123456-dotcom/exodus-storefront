@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% if request.page_type == 'collection' or request.page_type == 'search' %}
+      <meta name="theme-color" content="#f2f1ef">
+    {% else %}
+      <meta name="theme-color" content="#101012">
+    {% endif %}
+    {% render 'seo-meta' %}
+    {{ content_for_header }}
+    {{ 'exodus.css' | asset_url | stylesheet_tag }}
+    {{ 'identity.css' | asset_url | stylesheet_tag }}
+    {{ 'retail.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'exodus.js' | asset_url }}" defer></script>
+    <script src="{{ 'image-viewer.js' | asset_url }}" defer></script>
+    <script src="{{ 'sample-catalog.js' | asset_url }}" defer></script>
+    {% if request.page_type == 'collection' or request.page_type == 'search' %}
+      <script src="{{ 'catalog-look.js' | asset_url }}" defer></script>
+    {% endif %}
+    <script src="{{ 'identity.js' | asset_url }}" defer></script>
+    <script src="{{ 'cart.js' | asset_url }}" defer></script>
+  </head>
+  <body{% if request.page_type == 'collection' or request.page_type == 'search' %} class="catalog-surface"{% endif %}>
+    <a class="skip-link" href="#MainContent">{{ 'ui.skip' | t | escape }}</a>
+    {% section 'header' %}
+    <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
+    {% section 'footer' %}
+    <dialog id="ImageViewer" class="image-viewer" aria-label="{{ 'ui.viewer' | t | escape }}" aria-describedby="ViewerCaption">
+      <div class="viewer-toolbar"><span id="ViewerCount" class="viewer-count" role="status" data-label="{{ 'product_ui.image_position' | t: current: '[current]', total: '[total]' | escape }}"></span><div class="viewer-actions"><button id="ViewerRotate" type="button" class="viewer-zoom" aria-controls="ViewerViewport" disabled>{{ 'product_ui.rotate_image' | t | escape }}</button><button id="ViewerZoom" type="button" class="viewer-zoom" aria-controls="ViewerViewport" aria-pressed="false" data-zoom-label="{{ 'product_ui.zoom_detail' | t | escape }}" data-fit-label="{{ 'product_ui.fit_image' | t | escape }}" disabled>{{ 'product_ui.zoom_detail' | t | escape }}</button><button type="button" class="dialog-close" data-close-dialog>{{ 'ui.close' | t | escape }}</button></div></div>
+      <div id="ViewerViewport" class="viewer-stage" tabindex="0" role="region" aria-label="{{ 'product_ui.image_area' | t | escape }}"><div id="ViewerCanvas" class="viewer-canvas" hidden><img id="ViewerImage" width="1400" height="1400" alt="" hidden></div><p id="ViewerLoadStatus" class="viewer-load-status" role="status" data-loading="{{ 'product_ui.image_loading' | t | escape }}" data-failed="{{ 'product_ui.image_failed' | t | escape }}" hidden></p></div>
+      <nav class="viewer-navigation" data-viewer-navigation aria-label="{{ 'product_ui.gallery' | t | escape }}" hidden><button type="button" data-viewer-previous>{{ 'product_ui.previous_image' | t | escape }}</button><button type="button" data-viewer-next>{{ 'product_ui.next_image' | t | escape }}</button></nav>
+      <a id="ViewerOriginal" class="viewer-original" hidden>{{ 'product_ui.open_image' | t | escape }}</a>
+      <p id="ViewerCaption"></p>
+    </dialog>
+  </body>
+</html>

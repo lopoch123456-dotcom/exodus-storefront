@@ -1,0 +1,16 @@
+{% assign rotation_key = image_id | append: '' %}
+{% assign image_caption = image.alt | default: title %}
+{% if look_label != blank %}{% assign image_caption = look_label | append: ' · ' | append: image_caption %}{% endif %}
+{% if thumbnail %}
+<a href="#ProductImage-{{ section_id }}-{{ image_id }}" data-gallery-thumb="{{ image_id }}" aria-label="{{ 'product_ui.view_image' | t: number: number | escape }}{% if look_label != blank %} · {{ look_label | escape }}{% endif %}"{% if first %} aria-current="true"{% endif %}>
+  {{ image | image_url: width: 160 | image_tag: loading: 'lazy', alt: image_caption }}
+  {% if look_label != blank %}<span class="gallery-thumb-label">{{ 'catalog_look.show' | t | escape }}</span>{% endif %}
+</a>
+{% else %}
+  {% assign image_loading = 'lazy' %}{% if first %}{% assign image_loading = 'eager' %}{% endif %}
+  <a class="gallery-frame{% unless first %}{% if image.aspect_ratio and image.aspect_ratio > 1 %} gallery-frame-landscape{% endif %}{% endunless %}" id="ProductImage-{{ section_id }}-{{ image_id }}" href="{{ image | image_url: width: 2000 }}" data-gallery-frame="{{ image_id }}" data-view-image="{{ image | image_url: width: 2000 }}" data-view-rotation="{{ rotations[rotation_key] | default: 0 | escape }}" data-caption="{{ image_caption | escape }}">
+    {{ image | image_url: width: 1400 | image_tag: loading: image_loading, widths: '600,1000,1400', sizes: '(min-width: 768px) 52vw, 100vw', alt: image_caption }}
+    <span class="gallery-caption">{{ image_caption | escape }}</span>
+    <span class="gallery-zoom">{{ 'product_ui.enlarge' | t | escape }} +</span>
+  </a>
+{% endif %}

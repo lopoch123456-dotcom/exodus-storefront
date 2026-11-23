@@ -1,0 +1,10 @@
+<div class="sample-catalog-controls" data-sample-catalog-controls hidden>
+  <div class="sample-catalog-top"><p data-catalog-count role="status" data-count-label="{{ 'sample_catalog.results_count' | t: count: '[count]' | escape }}"></p>
+    <label class="catalog-series"><span>{{ 'sample_catalog.series' | t | escape }}</span><select data-catalog-series aria-label="{{ 'sample_catalog.series' | t | escape }}"><option value="all">{{ 'sample_catalog.all' | t | escape }}</option><option value="samples">{{ 'sample_catalog.samples' | t | escape }}</option><option value="archive">{{ 'sample_catalog.archive' | t | escape }}</option></select></label>
+  </div>
+  <div class="sample-category-list" role="group" aria-label="{{ 'sample_catalog.category' | t | escape }}">
+  {% assign category_keys = 'all,tees,polos,longsleeves,hoodies,sweatshirts,shorts,denim' | split: ',' %}
+  {% for category in category_keys %}{% assign category_label = 'sample_catalog.' | append: category %}<button type="button" data-catalog-category="{{ category }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ category_label | t | escape }}</button>{% endfor %}
+  </div>
+  <div class="sample-catalog-empty" data-catalog-empty hidden><p>{{ 'sample_catalog.empty' | t | escape }}</p><button class="underlined" type="button" data-catalog-reset>{{ 'sample_catalog.reset' | t | escape }}</button></div>
+</div>

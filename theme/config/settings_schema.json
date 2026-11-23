@@ -1,0 +1,38 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Exodus - No Fixed Destination",
+    "theme_version": "0.1.0",
+    "theme_author": "Exodus",
+    "theme_documentation_url": "https://shopify.dev/docs/storefronts/themes",
+    "theme_support_url": "https://help.shopify.com/"
+  },
+  {
+    "name": "Brand & release",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "sample_mode",
+        "label": "Sample preview mode",
+        "default": true,
+        "info": "Hides purchase controls while the collection is in development. Turn off only after product data and checkout have been verified."
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image",
+        "label": "Social sharing fallback",
+        "info": "Use a confirmed brand or sample photograph. Product/page images take priority. The default is an existing sample photograph."
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Browser icon"
+      }
+    ]
+  }
+]

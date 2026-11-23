@@ -1,0 +1,40 @@
+<header class="site-header">
+  <nav class="desktop-nav" aria-label="{{ 'ui.main_nav' | t | escape }}">
+    <a href="{{ routes.all_products_collection_url }}">{{ 'ui.collection' | t | escape }}</a>
+    <a href="{{ routes.root_url }}pages/lookbook">{{ 'ui.journal' | t | escape }}</a>
+    <a href="{{ routes.root_url }}pages/about">{{ 'ui.about' | t | escape }}</a>
+  </nav>
+  <button class="mobile-menu text-button" type="button" data-open-dialog="NavigationDialog">{{ 'ui.menu' | t | escape }}</button>
+  <a class="wordmark brand-home" href="{{ routes.root_url }}" aria-label="{{ 'ui.home_accessible' | t | escape }}">
+    {% if settings.logo != blank %}
+      {{ settings.logo | image_url: width: 400 | image_tag: width: 200, alt: shop.name }}
+    {% else %}<img src="{{ 'brand-emblem-original.png' | asset_url }}" width="58" height="50" alt="{{ shop.name | escape }}">{% endif %}
+  </a>
+  <div class="header-actions">
+    {% if localization.available_languages.size > 1 %}<details class="language-menu"><summary aria-label="{{ 'ui.switch_language' | t | escape }}">{% if request.locale.iso_code == 'zh-CN' %}中文{% else %}EN{% endif %}</summary>{% render 'language-selector', localization: localization, request: request %}</details>{% endif %}
+    <button class="search-trigger text-button" type="button" data-open-dialog="SearchDialog">{{ 'ui.search' | t | escape }}</button>
+    <a href="{{ routes.cart_url }}" aria-label="{{ 'ui.bag_accessible' | t: count: cart.item_count | escape }}">{{ 'ui.bag' | t | escape }} <span class="bag-count">{{ cart.item_count }}</span></a>
+  </div>
+</header>
+<dialog id="NavigationDialog" class="navigation-dialog" aria-label="{{ 'ui.navigation' | t | escape }}">
+  <div class="dialog-top"><span>EXODUS</span><button type="button" data-close-dialog>{{ 'ui.close' | t | escape }}</button></div>
+  <nav aria-label="{{ 'ui.mobile_nav' | t | escape }}">
+    <a href="{{ routes.all_products_collection_url }}">{{ 'ui.collection' | t | escape }} <span>01</span></a>
+    <a href="{{ routes.root_url }}pages/lookbook">{{ 'ui.journal' | t | escape }} <span>02</span></a>
+    <a href="{{ routes.root_url }}pages/about">{{ 'ui.about' | t | escape }} <span>03</span></a>
+    <a href="{{ routes.root_url }}pages/contact">{{ 'ui.contact' | t | escape }} <span>04</span></a>
+    <a href="{{ routes.search_url }}">{{ 'ui.search' | t | escape }} <span>05</span></a>
+  </nav>
+  <p class="eyebrow">{{ 'ui.point' | t | escape }}</p>
+</dialog>
+<dialog id="SearchDialog" class="search-dialog" aria-labelledby="SearchTitle">
+  <div class="dialog-top"><h2 id="SearchTitle">{{ 'ui.find' | t | escape }}</h2><button type="button" data-close-dialog>{{ 'ui.close' | t | escape }}</button></div>
+  <form action="{{ routes.search_url }}" method="get" role="search">
+    <label for="HeaderSearch">{{ 'ui.search_collection' | t | escape }}</label>
+    <div class="input-row"><input id="HeaderSearch" name="q" type="search" required autofocus placeholder="{{ 'ui.search_placeholder' | t | escape }}"><button type="submit">{{ 'ui.search_submit' | t | escape }}</button></div>
+    <input type="hidden" name="type" value="product">
+  </form>
+</dialog>
+{% schema %}
+{"name":"Exodus header","settings":[]}
+{% endschema %}

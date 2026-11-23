@@ -1,0 +1,29 @@
+<section class="identity-stage" aria-labelledby="IdentityTitle">
+  <div class="identity-copy">
+    <h1 id="IdentityTitle">{{ 'identity.title' | t | escape }}</h1>
+    <p>{{ 'retail.hero_copy' | t | escape }}</p>
+    <a class="identity-link" href="{{ routes.all_products_collection_url }}">{{ 'ui.collection' | t | escape }} ↗</a>
+    <a class="identity-link" href="{{ routes.root_url }}pages/lookbook">{{ 'retail.view_campaign' | t | escape }} ↗</a>
+  </div>
+  <div class="object-exhibit" data-object-exhibit data-auto-object>
+    <div class="object-viewport" data-model-frame>
+      <img data-model-poster src="{{ 'silver-devil-transparent-v2.png' | asset_url }}" width="700" height="800" alt="{{ 'identity.object_alt' | t | escape }}" fetchpriority="high">
+    </div>
+    <div class="object-actions">
+      <button class="object-load" type="button" data-load-object data-a11y="{{ 'identity.a11y_json' | t | escape }}" data-model-src="{{ 'exodus-devil-web-v1.glb' | asset_url }}" data-module-src="{{ 'model-viewer.min.js' | asset_url }}" data-loading-label="{{ 'identity.loading' | t | escape }}" data-error-label="{{ 'identity.retry' | t | escape }}" data-ready-label="{{ 'identity.ready' | t | escape }}" data-alt="{{ 'identity.object_alt' | t | escape }}">{{ 'identity.explore_object' | t | escape }}</button>
+      <button type="button" data-rotate-object data-play-label="{{ 'identity.rotate' | t | escape }}" data-pause-label="{{ 'identity.pause' | t | escape }}" hidden aria-pressed="false">{{ 'identity.rotate' | t | escape }}</button>
+      <button type="button" data-follow-object data-play-label="{{ 'retail.follow' | t | escape }}" data-pause-label="{{ 'retail.pause_follow' | t | escape }}" aria-pressed="false" hidden>{{ 'retail.follow' | t | escape }}</button>
+      <button type="button" data-reset-object hidden>{{ 'identity.reset' | t | escape }}</button>
+    </div>
+    <p data-object-status role="status" aria-live="polite">{{ 'identity.object_note' | t | escape }}</p>
+    <noscript><p>{{ 'identity.nojs' | t | escape }}</p></noscript>
+  </div>
+  <figure class="identity-sample">
+    <a href="{{ routes.root_url }}pages/sample-notes"><img src="{{ 'sample-detail.jpg' | asset_url }}" width="1200" height="1800" alt="{{ 'ui.alt_detail' | t | escape }}" loading="lazy"></a>
+    <figcaption>{{ 'ui.hood_title' | t | escape }}</figcaption>
+  </figure>
+</section>
+<section class="retail-collection section-pad" id="Collection"><div class="retail-heading"><h2>{{ 'retail.collection_title' | t | escape }}</h2><a class="retail-text-link" href="{{ routes.all_products_collection_url }}">{{ 'retail.view_all' | t | escape }} ↗</a></div>{% if settings.sample_mode %}<p class="retail-availability">{{ 'retail.preview_note' | t | escape }}</p>{% render 'sample-grid', routes: routes, card_limit: 4 %}{% else %}<div class="product-grid commerce-grid">{% for product in collections.all.products limit: 4 %}{% render 'product-card', product: product %}{% endfor %}</div>{% endif %}</section>
+<section class="retail-detail"><a class="retail-detail-image" href="{{ routes.root_url }}pages/sample-notes"><img src="{{ 'sample-detail.jpg' | asset_url }}" width="1200" height="1800" loading="lazy" alt="{{ 'ui.alt_detail' | t | escape }}"></a><div class="retail-detail-copy"><img class="retail-cutout" src="{{ 'original-graphic-exitway-dark.png' | asset_url }}" width="285" height="245" loading="lazy" alt=""><p class="eyebrow">EXODUS</p><h2>{{ 'retail.detail_title' | t | escape }}</h2><p>{{ 'retail.detail_copy' | t | escape }}</p><a class="retail-text-link" href="{{ routes.root_url }}pages/sample-notes">{{ 'retail.view_piece' | t | escape }} ↗</a></div></section>
+<section class="retail-campaign"><img class="retail-campaign-photo" src="{{ 'sample-ride.jpg' | asset_url }}" width="1200" height="1800" loading="lazy" alt="{{ 'ui.alt_helmet' | t | escape }}"><div class="retail-campaign-copy"><img class="retail-wordform" src="{{ 'original-graphic-wordform-dark.png' | asset_url }}" width="405" height="89" loading="lazy" alt=""><p class="eyebrow">{{ 'retail.campaign' | t | escape }}</p><h2>{{ 'retail.campaign_title' | t | escape }}</h2><a class="retail-light-button" href="{{ routes.root_url }}pages/lookbook">{{ 'retail.view_campaign' | t | escape }} ↗</a></div></section>
+{% schema %}{"name":"Exodus storefront","settings":[],"presets":[{"name":"Exodus storefront"}]}{% endschema %}

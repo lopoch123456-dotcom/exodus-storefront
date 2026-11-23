@@ -1,0 +1,33 @@
+{% assign selected_variant = product.selected_or_first_available_variant %}
+<section class="section-pad product-layout">
+<div class="product-media">{% render 'product-gallery', product: product, section: section %}</div>
+<div class="product-info">
+  <a class="underlined product-back" href="{{ routes.all_products_collection_url }}" data-product-back{% if settings.sample_mode %} data-sample-return{% endif %} data-search-path="{{ routes.search_url | escape }}" data-search-label="{{ 'ui.back_search' | t | escape }}">{{ 'ui.back_collection' | t | escape }}</a>
+  <p class="eyebrow">{{ 'ui.collection_eyebrow' | t | escape }}</p><h1>{{ product.title | escape }}</h1>
+  {% if settings.sample_mode %}
+    <p class="status-line">{% if product.metafields.custom.archive_design.value %}{{ 'sample_catalog.archive_status' | t | escape }}{% else %}{{ 'ui.sample_only' | t | escape }}{% endif %}</p>
+  {% else %}
+    <p class="product-price" data-product-price>{{ selected_variant.price | money_with_currency }}</p>
+    {% form 'product', product, id: 'ProductForm' %}
+      <label for="ProductVariant">{{ 'ui.choose_option' | t | escape }}</label>
+      <select id="ProductVariant" name="id" data-product-variant>
+      {% for variant in product.variants %}
+        <option value="{{ variant.id }}" data-price="{{ variant.price | money_with_currency | escape }}" data-available="{{ variant.available }}" data-image-id="{{ variant.featured_image.id }}" {% if variant.id == selected_variant.id %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title | escape }} — {{ variant.price | money_with_currency }}{% unless variant.available %} {{ 'ui.sold_out_option' | t | escape }}{% endunless %}</option>
+      {% endfor %}
+      </select>
+      <label for="ProductQuantity">{{ 'ui.quantity' | t | escape }}</label><input id="ProductQuantity" name="quantity" type="number" required min="1" step="1" value="1" inputmode="numeric">
+      <button class="button" type="submit" name="add" data-product-add data-available-label="{{ 'ui.add_bag' | t | escape }}" data-sold-out-label="{{ 'ui.sold_out' | t | escape }}" {% unless selected_variant.available %}disabled{% endunless %}>{% if selected_variant.available %}{{ 'ui.add_bag' | t | escape }}{% else %}{{ 'ui.sold_out' | t | escape }}{% endif %}</button>
+      {% if form.errors %}{{ form.errors | default_errors }}{% endif %}<p data-preview-status role="status"></p>
+    {% endform %}
+  {% endif %}
+  <div class="rich-text">{{ product.description }}</div>
+  <details class="product-size"><summary>{{ 'product_ui.sizing' | t | escape }}</summary>
+    {% assign size_page = product.metafields.custom.size_guide.value %}
+    {% if size_page.content != blank %}<div class="rich-text">{{ size_page.content }}</div>{% else %}<p>{{ 'product_ui.size_pending' | t | escape }}</p>{% endif %}
+  </details>
+  {% render 'product-specs', style_code: product.metafields.custom.style_code.value, show_title: false %}
+</div>
+</section>
+{% schema %}
+{"name":"Product","settings":[]}
+{% endschema %}

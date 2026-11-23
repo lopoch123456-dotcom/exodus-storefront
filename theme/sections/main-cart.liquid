@@ -1,0 +1,37 @@
+<section class="section-pad cart-page"><p class="eyebrow">{{ 'ui.selection' | t | escape }}</p><h1>{{ 'ui.your_bag' | t | escape }} <span>({{ cart.item_count }})</span></h1>
+{% if cart.item_count == 0 %}<div class="empty-state"><p>{{ 'ui.bag_empty' | t | escape }}</p><a class="button" href="{{ routes.all_products_collection_url }}">{{ 'ui.explore_collection' | t | escape }}</a></div>{% else %}
+<form action="{{ routes.cart_url }}" method="post" class="bag-layout" data-cart-form data-checkout-form data-update-url="{{ routes.cart_update_url }}.js" data-cart-url="{{ routes.cart_url }}" data-error="{{ 'bag.error' | t | escape }}" data-network-error="{{ 'bag.network' | t | escape }}" data-rule-error="{{ 'bag.rule_error' | t | escape }}" data-pending="{{ 'bag.pending' | t | escape }}" data-draft="{{ 'bag.draft' | t | escape }}" data-no-changes="{{ 'bag.no_changes' | t | escape }}" data-review="{{ 'bag.review' | t | escape }}" data-dirty-message="{{ 'bag.edit_note' | t | escape }}">
+<div class="bag-lines">
+{% for item in cart.items %}
+<article class="bag-line" data-cart-line>
+  <a class="bag-image" href="{{ item.url }}">{% if item.image %}{% assign item_alt = item.image.alt | default: item.product.title %}{{ item.image | image_url: width: 600 | image_tag: width: 160, loading: 'lazy', alt: item_alt }}{% else %}<span>{{ 'catalog.photo_pending' | t | escape }}</span>{% endif %}</a>
+  <div class="bag-item-info"><h2><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h2>
+    {% unless item.product.has_only_default_variant %}<p class="bag-option">{{ item.variant.title | escape }}</p>{% endunless %}
+    {% if item.selling_plan_allocation %}<p class="bag-option">{{ item.selling_plan_allocation.selling_plan.name | escape }}</p>{% endif %}
+    {% for property in item.properties %}{% assign property_first = property.first | slice: 0 %}{% if property.last != blank and property_first != '_' %}<p class="bag-option">{{ property.first | escape }}: {{ property.last | escape }}</p>{% endif %}{% endfor %}
+    <p class="bag-price">{% if item.original_line_price > item.final_line_price %}<s>{{ item.original_line_price | money_with_currency }}</s> {% endif %}{{ item.final_line_price | money_with_currency }}</p>
+    {% if settings.sample_mode %}<p>{{ 'ui.quantity' | t | escape }}: {{ item.quantity }}</p>{% else %}
+    <div class="bag-update">
+      <label for="BagQuantity-{{ forloop.index }}">{{ 'ui.quantity' | t | escape }}</label>
+      <div class="bag-quantity"><button type="button" data-quantity-adjust="-1" aria-label="{{ 'bag.decrease' | t: title: item.product.title | escape }}">-</button><input id="BagQuantity-{{ forloop.index }}" type="number" name="updates[]" data-cart-quantity data-line-key="{{ item.key | escape }}" required min="0" step="1" {% if item.variant.quantity_rule.max != nil %}max="{{ item.variant.quantity_rule.max }}"{% endif %} data-rule-min="{{ item.variant.quantity_rule.min | default: 1 }}" data-rule-step="{{ item.variant.quantity_rule.increment | default: 1 }}" value="{{ item.quantity }}" inputmode="numeric"><button type="button" data-quantity-adjust="1" aria-label="{{ 'bag.increase' | t: title: item.product.title | escape }}">+</button></div>
+      <a href="{{ item.url_to_remove | escape }}" data-cart-remove="{{ item.key | escape }}" aria-label="{{ 'bag.remove_item' | t: title: item.product.title | escape }}">{{ 'ui.remove' | t | escape }}</a>
+    </div>{% endif %}
+  </div>
+</article>{% endfor %}
+<a class="underlined bag-continue" href="{{ routes.all_products_collection_url }}">{{ 'bag.continue' | t | escape }}</a>
+</div><aside class="bag-summary"><h2>{{ 'bag.summary' | t | escape }}</h2>
+  <div class="bag-total"><span>{{ 'ui.subtotal' | t | escape }}</span><strong>{{ cart.total_price | money_with_currency }}</strong></div>
+  {% for discount in cart.cart_level_discount_applications %}<p class="bag-discount">{{ discount.title | escape }} -{{ discount.total_allocated_amount | money_with_currency }}</p>{% endfor %}
+  <p class="bag-shipping">{{ 'ui.shipping_note' | t | escape }}</p>
+  {% if settings.sample_mode %}<p class="status-line">{{ 'ui.sample_checkout' | t | escape }}</p>{% else %}
+  <p class="bag-draft" data-cart-draft role="status" aria-live="polite"></p>
+  <button type="submit" name="update" class="button button-outline bag-save" data-cart-save>{{ 'bag.save' | t | escape }}</button>
+  <p class="bag-message" data-cart-status role="status" aria-live="polite" aria-atomic="true"></p>
+  <a class="underlined bag-refresh" data-cart-refresh href="{{ routes.cart_url }}" hidden>{{ 'bag.refresh' | t | escape }}</a>
+  <button type="submit" name="checkout" class="button">{{ 'ui.checkout' | t | escape }}</button><p data-preview-status role="status"></p>
+  {% endif %}
+  <p class="bag-edit-note">{{ 'bag.edit_note' | t | escape }}</p>
+</aside></form>{% endif %}</section>
+{% schema %}
+{"name":"Shopping bag","settings":[]}
+{% endschema %}

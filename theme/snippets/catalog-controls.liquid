@@ -1,0 +1,32 @@
+{% assign sort_value = results.sort_by | default: results.default_sort_by %}
+<details class="catalog-controls" open data-catalog-controls>
+  <summary>{{ 'catalog.filter_sort' | t | escape }} <span aria-hidden="true">+</span></summary>
+  <form action="{{ base_url }}" method="get" class="catalog-form">
+    {% if is_search %}<input type="hidden" name="q" value="{{ search.terms | escape }}"><input type="hidden" name="type" value="product">{% endif %}
+    <div class="catalog-sort"><label for="Sort-{{ section.id }}">{{ 'catalog.sort' | t | escape }}</label>
+    <select id="Sort-{{ section.id }}" name="sort_by">{% for option in results.sort_options %}<option value="{{ option.value | escape }}" {% if option.value == sort_value %}selected{% endif %}>{{ option.name | escape }}</option>{% endfor %}</select></div>
+    {% for filter in results.filters %}{% assign filter_index = forloop.index %}
+    <details class="filter-group" {% if forloop.first %}open{% endif %}>
+      <summary>{{ filter.label | escape }}{% if filter.active_values.size > 0 %} <span>({{ filter.active_values.size }})</span>{% endif %}</summary>
+      {% case filter.type %}
+      {% when 'boolean', 'list' %}
+        <ul class="filter-values">{% for value in filter.values %}<li>
+          <label for="Filter-{{ section.id }}-{{ filter_index }}-{{ forloop.index }}">
+            <input type="checkbox" id="Filter-{{ section.id }}-{{ filter_index }}-{{ forloop.index }}" name="{{ value.param_name | escape }}" value="{{ value.value | escape }}" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+            <span>{{ value.label | escape }}</span><span class="filter-count">{{ value.count }}</span>
+          </label>
+        </li>{% endfor %}</ul>
+      {% when 'price_range' %}
+        <div class="filter-price"><p>{{ cart.currency.iso_code | escape }}</p>
+          <label for="PriceMin-{{ section.id }}-{{ forloop.index }}">{{ 'catalog.min' | t | escape }}</label>
+          <input id="PriceMin-{{ section.id }}-{{ forloop.index }}" type="number" inputmode="decimal" name="{{ filter.min_value.param_name | escape }}" min="0" step="any" max="{{ filter.range_max | divided_by: 100.0 }}" {% if filter.min_value.value != nil %}value="{{ filter.min_value.value | divided_by: 100.0 }}"{% endif %} placeholder="0">
+          <label for="PriceMax-{{ section.id }}-{{ forloop.index }}">{{ 'catalog.max' | t | escape }}</label>
+          <input id="PriceMax-{{ section.id }}-{{ forloop.index }}" type="number" inputmode="decimal" name="{{ filter.max_value.param_name | escape }}" min="0" step="any" max="{{ filter.range_max | divided_by: 100.0 }}" {% if filter.max_value.value != nil %}value="{{ filter.max_value.value | divided_by: 100.0 }}"{% endif %} placeholder="{{ filter.range_max | divided_by: 100.0 }}">
+        </div>
+      {% endcase %}
+    </details>
+    {% endfor %}
+    <button class="button" type="submit">{{ 'catalog.apply' | t | escape }} <span aria-hidden="true">→</span></button>
+    {% render 'catalog-reset', results: results, clear_url: clear_url %}
+  </form>
+</details>

@@ -1,0 +1,13 @@
+<section class="section-pad catalog-page search-page"><h1>{{ 'ui.search' | t | escape }}</h1>
+<form action="{{ routes.search_url }}" method="get" role="search" class="page-search"><label for="PageSearch">{{ 'ui.search_collection' | t | escape }}</label><div class="input-row"><input id="PageSearch" name="q" type="search" value="{{ search.terms | escape }}" required><button type="submit">{{ 'ui.search_submit' | t | escape }}</button></div><input type="hidden" name="type" value="product"></form>
+{% if settings.sample_mode %}{% render 'sample-catalog-controls' %}{% render 'sample-grid', routes: routes %}{% elsif search.performed %}
+{% assign sort_value = search.sort_by | default: search.default_sort_by %}
+{% capture clear_url %}{{ routes.search_url }}?q={{ search.terms | url_encode }}&type=product&sort_by={{ sort_value | url_encode }}{% endcapture %}
+<div class="catalog-layout">
+{% render 'catalog-controls', results: search, base_url: routes.search_url, clear_url: clear_url, is_search: true, search: search, section: section, cart: cart %}
+<div class="catalog-results"><p class="catalog-count" role="status">{{ 'catalog.count' | t: count: search.results_count | escape }}</p>{% render 'active-filters', results: search %}
+{% paginate search.results by 24 %}<div class="product-grid commerce-grid">{% for product in search.results %}{% if product.object_type == 'product' %}{% render 'product-card', product: product, allow_look: true %}{% endif %}{% else %}<div class="catalog-empty"><h2>{{ 'catalog.empty' | t | escape }}</h2><p>{{ 'ui.no_results' | t: terms: search.terms | escape }}</p><p>{{ 'catalog.try_search' | t | escape }}</p>{% render 'catalog-reset', results: search, clear_url: clear_url %}</div>{% endfor %}</div>{% render 'catalog-pagination', pagination: paginate %}{% endpaginate %}</div></div>
+{% endif %}</section>
+{% schema %}
+{"name":"Search","settings":[]}
+{% endschema %}
