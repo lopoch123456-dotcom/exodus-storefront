@@ -4,6 +4,9 @@
 <div class="product-info">
   <a class="underlined product-back" href="{{ routes.all_products_collection_url }}" data-product-back{% if settings.sample_mode %} data-sample-return{% endif %} data-search-path="{{ routes.search_url | escape }}" data-search-label="{{ 'ui.back_search' | t | escape }}">{{ 'ui.back_collection' | t | escape }}</a>
   <p class="eyebrow">{{ 'ui.collection_eyebrow' | t | escape }}</p><h1>{{ product.title | escape }}</h1>
+  {% if product.metafields.custom.sample_colors.value.size > 1 %}
+  <div class="product-color-options"><p>{{ 'catalog_colors.label' | t | escape }}</p>{% for color in product.metafields.custom.sample_colors.value %}<a href="{{ routes.root_url }}products/{{ color.handle }}" data-product-color-handle="{{ color.handle }}" {% if color.selected %}aria-current="true"{% endif %}>{{ color.label | escape }}</a>{% endfor %}</div>
+  {% endif %}
   {% if settings.sample_mode %}
     <p class="status-line">{% if product.metafields.custom.archive_design.value %}{{ 'sample_catalog.archive_status' | t | escape }}{% else %}{{ 'ui.sample_only' | t | escape }}{% endif %}</p>
   {% else %}

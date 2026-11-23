@@ -147,3 +147,11 @@ document.querySelectorAll('[data-product-variant]').forEach(select => {
 if (window.matchMedia('(max-width: 767px)').matches) {
   document.querySelectorAll('[data-catalog-controls]').forEach(control => { control.open = false; });
 }
+
+// Keep the collection/search return context while changing a sample color.
+document.querySelectorAll('[data-product-color-handle]').forEach(link=>{
+ link.addEventListener('click',()=>{
+  if(!catalogReturn)return;
+  try{sessionStorage.setItem(sampleReturnKey,JSON.stringify({product:link.dataset.productColorHandle,language:document.documentElement.lang,context:catalogReturn,expires:Date.now()+120000}));}catch{}
+ });
+});

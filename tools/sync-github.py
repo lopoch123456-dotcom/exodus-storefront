@@ -82,7 +82,7 @@ Original Shopify native theme and its public design preview.
 - Website: https://lopoch123456-dotcom.github.io/exodus-storefront/
 - Native Shopify source: theme/
 - GitHub Pages output: docs/ (main branch, no Jekyll)
-- Collection: 23 sample/archive entries, not confirmed production inventory.
+- Collection: 14 style cards / 18 color records after owner removals and color grouping; not confirmed production inventory.
 - Garment covers precede model/styling views. AI views retain their labels.
 - Silver original 3D emblem, controls and reduced-motion support are retained.
 

@@ -1,12 +1,12 @@
 {% assign has_look = false %}
-{% if card_limit == blank and look_asset != blank %}
+{% if false %}
   {% assign has_look = true %}
   {% assign product_title = title_key | t %}
 
 {% endif %}
 <div class="catalog-card-slot"{% if has_look %} data-catalog-look{% endif %}>
-<a class="sample-card packshot-card{{ image_class }}"{% if card_limit == blank %} id="catalog-{{ handle }}"{% endif %} data-catalog-style="{{ style | escape }}" data-category="{{ category }}" data-series="{{ series }}" data-search="{{ search }}" href="{{ routes.root_url }}products/{{ handle }}">
-  <div class="sample-picture packshot-picture">
+<a class="sample-card packshot-card{{ image_class }}"{% if card_limit == blank %} id="catalog-{{ handle }}"{% endif %} data-family="{{ family }}" data-color="{{ color }}" data-catalog-style="{{ style | escape }}" data-category="{{ category }}" data-series="{{ series }}" data-search="{{ search }}" href="{{ routes.root_url }}products/{{ handle }}"{% if secondary_color != blank %} hidden{% endif %}>
+  <div class="sample-picture packshot-picture"><span class="card-detail-cue" aria-hidden="true">+</span>
     <img src="{{ cover | asset_url }}" width="1122" height="1402" loading="lazy" alt="{{ cover_key | t | escape }}">
     {% if card_limit != blank %}<span class="sample-label">{{ status_key | t | escape }}</span>{% endif %}
     {% if has_look %}
@@ -23,6 +23,7 @@
     {% if card_limit != blank %}<span aria-hidden="true">↗</span>{% endif %}
   </div>
 </a>
+  {% if color_options_en != blank %}<div class="catalog-colors" role="group" aria-label="{{ 'catalog_colors.label' | t | escape }}">{% if request.locale.iso_code == 'zh-CN' %}{{ color_options_zh }}{% else %}{{ color_options_en }}{% endif %}</div>{% endif %}
   {% if has_look %}
     {% render 'catalog-look-control', title: product_title %}
   {% endif %}

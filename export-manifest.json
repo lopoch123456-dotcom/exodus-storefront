@@ -1,8 +1,8 @@
 {
   "date_vancouver": "2026-11-23",
   "source": "Current native Shopify theme",
-  "pages": 66,
-  "approved_theme_media": 81,
+  "pages": 56,
+  "approved_theme_media": 95,
   "static_preview_only": true,
   "shopify_connected": false,
   "files": [
@@ -100,6 +100,51 @@
       "path": "docs/assets/archive-design-kb-front.jpg",
       "bytes": 100106,
       "sha256": "38fca4d9a12a2f6cce45d7bc0319c85d7d82b1012ff02e5082d4145932cfb6ae"
+    },
+    {
+      "path": "docs/assets/archive-mockup-a-v3.webp",
+      "bytes": 78404,
+      "sha256": "40ca82481634a7eea6c66b5a17b91f6ed5aeb9c351f4b532803b1ef37066dfde"
+    },
+    {
+      "path": "docs/assets/archive-mockup-ab-v3.webp",
+      "bytes": 60396,
+      "sha256": "cf3a9c8bef81e1deef7dcbe64e7a81acfa9c4ea196d9452bab04ccfa088fe249"
+    },
+    {
+      "path": "docs/assets/archive-mockup-cb-v3.webp",
+      "bytes": 76680,
+      "sha256": "164aab7a36fe88625cb00d694de6cdbd6ebf4167e13f692e4a2bd2b2d20b66bc"
+    },
+    {
+      "path": "docs/assets/archive-mockup-d-v3.webp",
+      "bytes": 83290,
+      "sha256": "d2e7fddd0a163a9abd78fd522612bf216bb48b64c8eed18b1d02ef85081be04b"
+    },
+    {
+      "path": "docs/assets/archive-mockup-db-v3.webp",
+      "bytes": 55252,
+      "sha256": "12b01cec6e0c4d5f25762e81bbe8c938c7ceec9da30f51e396d33bbaa8dff7f3"
+    },
+    {
+      "path": "docs/assets/archive-mockup-eb-v3.webp",
+      "bytes": 71978,
+      "sha256": "337825f396e6baffb860d54f98b9eba276170c2b94326ec638390160e093248b"
+    },
+    {
+      "path": "docs/assets/archive-mockup-g-v3.webp",
+      "bytes": 80874,
+      "sha256": "2b819a9969b2bf4f0b1c22e69f3c4663f7ea482e0e10968244595516b1074261"
+    },
+    {
+      "path": "docs/assets/archive-mockup-i-v3.webp",
+      "bytes": 59680,
+      "sha256": "954b032c0152e07d539cdeed9c8cdd79b5bd9b48db34816bf90ae7859506d069"
+    },
+    {
+      "path": "docs/assets/archive-mockup-j-v3.webp",
+      "bytes": 55956,
+      "sha256": "3861ce06d50231755760083194cedf72ff2ae501a56aa92c401cae7cc0b99d64"
     },
     {
       "path": "docs/assets/archive-motion-poster-v1.jpg",
@@ -383,8 +428,8 @@
     },
     {
       "path": "docs/assets/exodus.js",
-      "bytes": 7847,
-      "sha256": "a40fcfe4af556a64d26831631255b475f4a57b21477531f632a644be7abe3bed"
+      "bytes": 8279,
+      "sha256": "75a11a44382296e6e4c242a27446b865f720e2eb731ed08223ab1d39ae151d4c"
     },
     {
       "path": "docs/assets/golden-girdle-LICENSE.txt",
@@ -403,13 +448,38 @@
     },
     {
       "path": "docs/assets/identity.js",
-      "bytes": 8177,
-      "sha256": "be4287c20517b840d85e96c137cc5978c184567cae6d6d6af452799f9d63bd34"
+      "bytes": 10451,
+      "sha256": "f7103c6dc8d268f5f4271437e1b00fc99ef37157ed313c4f69085ced7bfe2d5c"
     },
     {
       "path": "docs/assets/image-viewer.js",
       "bytes": 5811,
       "sha256": "746083adf5bb7f4fb31ad0ec4a5e7fbfe2c074f26a893799c06545ec9753eb3b"
+    },
+    {
+      "path": "docs/assets/lena-street-1.webp",
+      "bytes": 372308,
+      "sha256": "ca52d04ab0c9913323756cfe3d9b70e0d553b8b40e0ea0a7147212571eacda7e"
+    },
+    {
+      "path": "docs/assets/lena-street-13.webp",
+      "bytes": 822944,
+      "sha256": "f934fa6be246a7eb0f333350f9fcc2f7cbe2a1c8282974ff45aa7d0b31b922fb"
+    },
+    {
+      "path": "docs/assets/lena-street-15.webp",
+      "bytes": 426646,
+      "sha256": "0a5b1415ef6ad60f1e8fb8d8b2304945cc4882f5326e95fee65d89917d77b14d"
+    },
+    {
+      "path": "docs/assets/lena-street-7.webp",
+      "bytes": 779030,
+      "sha256": "9bc4ec10704082c0aeeae8808a370a146f3daf0b9612af84855e33b0165300d4"
+    },
+    {
+      "path": "docs/assets/lena-street-9.webp",
+      "bytes": 695848,
+      "sha256": "79354113d4b0c076c4d25ffe6074882a30066a2874bae75ff9814fa94ae5e0c3"
     },
     {
       "path": "docs/assets/model-viewer-LICENSE.txt",
@@ -448,13 +518,13 @@
     },
     {
       "path": "docs/assets/retail.css",
-      "bytes": 21309,
-      "sha256": "0ea8063c3a1fe7c6158a92722f2112e0a407ca4ddab6bc12e40f8b92959ffc3a"
+      "bytes": 25555,
+      "sha256": "9d2def57fd4a385b1af337a92c2719ebb432317894174f06ca69b2076166fa07"
     },
     {
       "path": "docs/assets/sample-catalog.js",
-      "bytes": 3787,
-      "sha256": "07990357d37f847ba4142ee68023e601ebfd1b040d8c3e2250d895ff855e61f0"
+      "bytes": 4822,
+      "sha256": "8901194c3c2336c00480674b05c5c601cd35125e7b63ece6c67bfbe9e993f2ae"
     },
     {
       "path": "docs/assets/sample-detail.jpg",
@@ -503,13 +573,13 @@
     },
     {
       "path": "docs/collections/all/index.html",
-      "bytes": 49295,
-      "sha256": "14414aa3426c4580bb02a3399e7b5c7c0abab5de3881701bc51f0e1c5c916715"
+      "bytes": 32475,
+      "sha256": "1d3daa0f12162ea69efe79c1c7166bfdc7dc818dcaaf1337510808bcef5a85a6"
     },
     {
       "path": "docs/index.html",
-      "bytes": 16983,
-      "sha256": "decadc4ea47a660ebf60bc07112a395346f23086b3b463253eff61a26d0040e3"
+      "bytes": 19122,
+      "sha256": "54b20333e664a6b7a4d182e9d524a6bcf0335c8698709f4015c2dcf9a69d395a"
     },
     {
       "path": "docs/pages/about/index.html",
@@ -543,118 +613,93 @@
     },
     {
       "path": "docs/products/archive-a/index.html",
-      "bytes": 12272,
-      "sha256": "0701e0da6e4c9e5d36c86c7205113648d6405d526a9028cb661d61b30f3ebb1a"
+      "bytes": 13633,
+      "sha256": "b7caa1bcefa1111d576545299eec4c1e5232a79594db842d02edfe0de8cd9c97"
     },
     {
       "path": "docs/products/archive-ab/index.html",
-      "bytes": 12111,
-      "sha256": "c0a117b2090e141d278640e99a8b58ce062b9d8e6be69bd3cd07955f1ae63633"
-    },
-    {
-      "path": "docs/products/archive-b/index.html",
-      "bytes": 12103,
-      "sha256": "6126f7e4047ecaccca708a5ae7a33b2aaa62b01458edd20385fccf1beb4361cb"
-    },
-    {
-      "path": "docs/products/archive-bb/index.html",
-      "bytes": 12123,
-      "sha256": "f849c70b684f1b12baa038962132a768ed6e9788149cb6a1bce2d34bbec82fa1"
+      "bytes": 13480,
+      "sha256": "6f970329471fb7b82ce577b9997a570fb4841b3150dc0c1b1a1cd1d7b9e719d0"
     },
     {
       "path": "docs/products/archive-cb/index.html",
-      "bytes": 12280,
-      "sha256": "31696a92e20e8700ae2c3f01802d02c39ee0e5e89e624e17c4cbdc95b6f00345"
+      "bytes": 13374,
+      "sha256": "786089334ea094f8d18506f98c4f247e6035434a780b23b2b2ece336798a7129"
     },
     {
       "path": "docs/products/archive-cream-pink-shorts/index.html",
-      "bytes": 12427,
-      "sha256": "3e6775b5fddaaed89303f0647eec43943b6079d939e70f341ab9f6b52eefcd9c"
+      "bytes": 12758,
+      "sha256": "558320e6c35d7c73c52f27c6f9a60072193de10e1e2ed5eb362062b7531be865"
     },
     {
       "path": "docs/products/archive-d/index.html",
-      "bytes": 12103,
-      "sha256": "f4cc8bceb91596f4490613f90c009ca42ef61b06e95784d6027d6fb8dba036b9"
+      "bytes": 13464,
+      "sha256": "a043d55d8a335a0129ba6f797254e99fc0a9f531fd8fa00232e596e45a97d685"
     },
     {
       "path": "docs/products/archive-db/index.html",
-      "bytes": 12123,
-      "sha256": "599240217c60145d13e7329080c46d4fac8a9c4f35f140ac3f85e0723274a7b4"
+      "bytes": 13492,
+      "sha256": "588961194a65a4516f41c5b2a3b7927d297be3156d09feaa72cf72d895f8624c"
     },
     {
       "path": "docs/products/archive-eb/index.html",
-      "bytes": 12195,
-      "sha256": "a3cadefc6987bd83800320bc052fdc4036231cce9a53deab98c85ce7ab769982"
-    },
-    {
-      "path": "docs/products/archive-f/index.html",
-      "bytes": 12067,
-      "sha256": "7217fcdd2a88542bea4f870825c6f8ea86c3ea56cf5091888a98d5fb38cb004f"
+      "bytes": 13588,
+      "sha256": "2b725962e7a4eef8a734c4df4ee53519c2d9f96d5db2ce181caee23cf0971673"
     },
     {
       "path": "docs/products/archive-g/index.html",
-      "bytes": 12115,
-      "sha256": "a04185f6fc42cd830891411451f5bef35aba79f39059f24d6ee297839b88554c"
+      "bytes": 13201,
+      "sha256": "afc793af5d061d2bc837951e3dea63b4f1d57e4efaa79cc5bac865d2b6bd3a72"
     },
     {
       "path": "docs/products/archive-i/index.html",
-      "bytes": 12079,
-      "sha256": "ad47d925f9855fd697b65e19b3bc93daf80ec688deb37ecdd601abd6e9488c55"
+      "bytes": 13165,
+      "sha256": "07a77b36a872fe5e63a4f0030ceda0bd7caaa08ea4ab74be0d49275996086fb1"
     },
     {
       "path": "docs/products/archive-j/index.html",
-      "bytes": 12067,
-      "sha256": "8ea56a22373297a2e416177abc4dc09b44fb4c93705035a698bad0d2a0809ff0"
-    },
-    {
-      "path": "docs/products/archive-k/index.html",
-      "bytes": 13398,
-      "sha256": "934f798941f2e97fd5d9fd6aa290e83e3723f5666258da5594db1b9e0a1f8333"
-    },
-    {
-      "path": "docs/products/archive-kb/index.html",
-      "bytes": 12159,
-      "sha256": "15d5ee062d321e5ae1014523c6aa63408e0851b2c2ae47ee7fd06b09887c65e1"
+      "bytes": 13153,
+      "sha256": "b2ef851828609185106dfadbfa9f1742fee63d13814baffdb1b64ee8853e38b7"
     },
     {
       "path": "docs/products/decalogue-waffle-henley/index.html",
-      "bytes": 14817,
-      "sha256": "0d88c0fe02007a6ced34b2f5cbbf0579fdcd248c8207f7d1428bf349e97e1b38"
+      "bytes": 16893,
+      "sha256": "adee36fc5541f5987142a3862dc0cd159f413b25b6d93bbebb0bb41ad8a9aaa9"
     },
     {
       "path": "docs/products/flame-graphic-white-t-shirt/index.html",
-      "bytes": 12662,
-      "sha256": "e7ee297967c49b8821f2517b84d02b449de88299934d1b29577e9a2b7b921b35"
+      "bytes": 12666,
+      "sha256": "91644b4edc38d540fbd25db24104640223b9a3df14a8e95b5ac2ea9e8f6ee497"
     },
     {
       "path": "docs/products/floral-zip-hoodie/index.html",
-      "bytes": 13553,
-      "sha256": "78782c975a734a7f42b6a37145f1f04ea1ec5b057b1391c0b74f8631293eab6f"
+      "bytes": 13557,
+      "sha256": "7e56a7af4b0d9a0fb4b28c5c675f76874478a05f6e16103e21c9b0c09a8b37b4"
     },
     {
       "path": "docs/products/graphic-black-shorts/index.html",
-      "bytes": 15165,
-      "sha256": "3676c4d2db282d4f15046c64b2d44bbfa83fa405a21ca4837552f3263b68c3f4"
+      "bytes": 15496,
+      "sha256": "3e00ed77a82bb3e576195118d5a20d710bf9065974a17dbf398bc8d7774f3c7f"
     },
     {
       "path": "docs/products/graphic-denim-trousers/index.html",
-      "bytes": 14744,
-      "sha256": "20c44e1b0723286aebd8398a1bc5b19f6bffaa9b61bea3f4be9226b01df23864"
+      "bytes": 14748,
+      "sha256": "bba2670ef44527ac528a99e3c07c5cd54d33baea08d3600173b754530e9040ed"
     },
     {
       "path": "docs/products/graphic-polo-shirt/index.html",
-      "bytes": 14881,
-      "sha256": "fd73ffd2126cdc5652c4ff4922f62d8b40adf4141920181baa664dffa216ce6b"
+      "bytes": 14885,
+      "sha256": "d8f29591da096a84d6fbcf90b63e5b35b7416819127f78cb4b536e9c008ea25d"
     },
     {
       "path": "docs/products/pink-wordmark-t-shirt/index.html",
-      "bytes": 13681,
-      "sha256": "ada5d8a10b1969463be74c09b2d4794455df6b35b35134c3c3bb76e5330b3c4a"
+      "bytes": 13984,
+      "sha256": "5b6be5eb46d55986aebd6bf3cf7b08c4a353dc503ff1f20abfe21d93309e2731"
     },
     {
       "path": "docs/products/rhinestone-shorts/index.html",
-      "bytes": 13824,
-      "sha256": "94897d61c8b723379c6411882d8d9dc67ad73e1137b5d4bad5ea9f7984543ac2"
+      "bytes": 13828,
+      "sha256": "8d330050be160a91dcbc14ca7cdd7b58ac7af64f0bed60215df1940e06522854"
     },
     {
       "path": "docs/robots.txt",
@@ -663,8 +708,8 @@
     },
     {
       "path": "docs/search/index.html",
-      "bytes": 49560,
-      "sha256": "cdce5a409286d1aec1ab6812110a9f7be619e52a63512c4ad847d016abff9fbe"
+      "bytes": 32740,
+      "sha256": "ba000bc9614e26f4f84e71986bca282aad5f8706e40469a2c9f48d54b16ea2a8"
     },
     {
       "path": "docs/zh-cn/404.html",
@@ -678,13 +723,13 @@
     },
     {
       "path": "docs/zh-cn/collections/all/index.html",
-      "bytes": 49398,
-      "sha256": "5c44f6a8bb8129a131beeed6c5e0916123e02f4df92a6b7cd8415b6786d8622e"
+      "bytes": 32360,
+      "sha256": "5803787816287f21b44d64f4cac0e8a7ec4e0c0171f3da81b26c6c16698faa6f"
     },
     {
       "path": "docs/zh-cn/index.html",
-      "bytes": 16908,
-      "sha256": "ae7b5cce7a9b8b414036b9673851fed5c53128e2e83ad8c54f992dac1f092e29"
+      "bytes": 19063,
+      "sha256": "650b254202556ca7aba9b534d7056d24771825af1b223bb1bcb4e23e263ff735"
     },
     {
       "path": "docs/zh-cn/pages/about/index.html",
@@ -713,128 +758,103 @@
     },
     {
       "path": "docs/zh-cn/products/archive-a/index.html",
-      "bytes": 12208,
-      "sha256": "83429f01148792e2808b33acfd73a0c46fe26878f92f95281870741d2975717b"
+      "bytes": 13528,
+      "sha256": "e853fafe4a4c94025709d702b850c5a67666dd2dfa4dbb7750ad0b0502d5f9ff"
     },
     {
       "path": "docs/zh-cn/products/archive-ab/index.html",
-      "bytes": 12032,
-      "sha256": "0c2a017be3864eaa450d6ba806a603c8b412401dc2b992bf46cb1983536946c9"
-    },
-    {
-      "path": "docs/zh-cn/products/archive-b/index.html",
-      "bytes": 11964,
-      "sha256": "a3a7c432418121c0c0eb9f18fa3fc07ff0cd4fd47652bd41c91870eefde6ea35"
-    },
-    {
-      "path": "docs/zh-cn/products/archive-bb/index.html",
-      "bytes": 11984,
-      "sha256": "95b754583527dcd3b0880e895c5be877355c62ff8dc859defdcdb306acd260ca"
+      "bytes": 13360,
+      "sha256": "3b2d2fbbf501e4a3246e61bfbf24ecfe73a5a20cd0c3ee23c75775f7dc640aae"
     },
     {
       "path": "docs/zh-cn/products/archive-cb/index.html",
-      "bytes": 12224,
-      "sha256": "db0e06c3515ada76e17056814445477d090748786c47967abf2df89c945967be"
+      "bytes": 13263,
+      "sha256": "ad13d477f1bf01e447aecddffea88d4bce8fe47c64737a8851216560949767c9"
     },
     {
       "path": "docs/zh-cn/products/archive-cream-pink-shorts/index.html",
-      "bytes": 12320,
-      "sha256": "d20c6ef422f030c110dc5af0b274eeb5208fcd1821cda657afc5bcbdc25c3caa"
+      "bytes": 12668,
+      "sha256": "4e8afd89002cc209fed4958c6d102e71999df9e3b9b408c25e30d07c3c87f30a"
     },
     {
       "path": "docs/zh-cn/products/archive-d/index.html",
-      "bytes": 11976,
-      "sha256": "6bf4a23e5d13e18b3730755d1fdef1a624073b49685c48ae21217e72bc42d75b"
+      "bytes": 13296,
+      "sha256": "bdabeaa3f0c684308038bcb372d044a0490a53c84e0ab41f48f4f9d280abf0bb"
     },
     {
       "path": "docs/zh-cn/products/archive-db/index.html",
-      "bytes": 11996,
-      "sha256": "53cc335e6fe437464ce160e08722243e3611987226c45be3a7d649471e378a57"
+      "bytes": 13324,
+      "sha256": "a4c81ff4616c0c541dd35bde6e5b25a188324add6d4cfb5b0a3d2633bca77b7d"
     },
     {
       "path": "docs/zh-cn/products/archive-eb/index.html",
-      "bytes": 12032,
-      "sha256": "325d45bd18bd63d5b9b61b05fa134bf4ced7a81648527546dc6ca95a6cb01f4b"
-    },
-    {
-      "path": "docs/zh-cn/products/archive-f/index.html",
-      "bytes": 12036,
-      "sha256": "310d7657538154af4a4cee61e957aceedec94e6fb2aec0055c400519e50490e7"
+      "bytes": 13384,
+      "sha256": "a781b43d82c83405da75d14e61aded25dc187ae0b3f757655708ddbfa05278c0"
     },
     {
       "path": "docs/zh-cn/products/archive-g/index.html",
-      "bytes": 12012,
-      "sha256": "a3cc192396e8b4359b60cc52a087dcb178d7786dfd121c86b134eb99cfa91a90"
+      "bytes": 13043,
+      "sha256": "d723fa63ec8522648a1d9abe1219256b3b6289cc80b77deb3e19d14db1341e53"
     },
     {
       "path": "docs/zh-cn/products/archive-i/index.html",
-      "bytes": 12012,
-      "sha256": "d84066918e5fee0729b649518de20a4dcb83148b712f6d96371a5d40f54ffff7"
+      "bytes": 13043,
+      "sha256": "d1f48b6403cd422c0a64685f537d2c01f67cbb25dfc48957c48fdea327a2cdf8"
     },
     {
       "path": "docs/zh-cn/products/archive-j/index.html",
-      "bytes": 12012,
-      "sha256": "28a33a4cfe49f7a74ff573e14d8c7f582cfa096c8bf26af8a7e0c80b54b2c08e"
-    },
-    {
-      "path": "docs/zh-cn/products/archive-k/index.html",
-      "bytes": 13271,
-      "sha256": "4694942f0cb1462cfb759992c58220e66a19c06e156467eb1badef396759828c"
-    },
-    {
-      "path": "docs/zh-cn/products/archive-kb/index.html",
-      "bytes": 12032,
-      "sha256": "50e3b2856a48145ce8b59b090c8f096aefd1893c2005abb0e49dd3ab5f547528"
+      "bytes": 13043,
+      "sha256": "2c9928f6a465b5d6079c4a1d4a7618605b4573591c0a66327cf2722f5cf90a0d"
     },
     {
       "path": "docs/zh-cn/products/decalogue-waffle-henley/index.html",
-      "bytes": 14646,
-      "sha256": "9055ae8a60bfe2c93e4ac93394fa6c5964875228f7b312343b0526a2e9eace96"
+      "bytes": 16636,
+      "sha256": "edc3e448083da87b15f72722d64adbf8255da2d1b3a79f414176e15452c98c43"
     },
     {
       "path": "docs/zh-cn/products/flame-graphic-white-t-shirt/index.html",
-      "bytes": 12402,
-      "sha256": "f3797146656a6c2966eafa0d14e861f5ffa8294545a06dc55eda625f74ed1485"
+      "bytes": 12406,
+      "sha256": "4b97372eb9b4afd984740f338afa27f8b075cc8fc1b3b7ae6f93dc0363fbceb1"
     },
     {
       "path": "docs/zh-cn/products/floral-zip-hoodie/index.html",
-      "bytes": 13429,
-      "sha256": "eec9241ed7b017aaaf548266d43c311f1e36e101a988f6d22751df7dbd96d947"
+      "bytes": 13433,
+      "sha256": "2a44c10972e0151f8e2df7c812a9373d36328e91b7ae079fa2e74598518f0564"
     },
     {
       "path": "docs/zh-cn/products/graphic-black-shorts/index.html",
-      "bytes": 14860,
-      "sha256": "7d1fedc5d3ef53f0e4026585c383d46719c9b9854b77779f3ab1732354c26b63"
+      "bytes": 15208,
+      "sha256": "0373d4e49d0698301724604238167257ea577251180537d2c9476ec8a809c9be"
     },
     {
       "path": "docs/zh-cn/products/graphic-denim-trousers/index.html",
-      "bytes": 14625,
-      "sha256": "4260d8b3cb796eae6b52a346fd6cd03b4334268be65aea0901d229fd7f130a91"
+      "bytes": 14629,
+      "sha256": "b34d4589f3dbd3f6be0c0d8671cfdd38fcb7332770221a2c11f1386f34f5635f"
     },
     {
       "path": "docs/zh-cn/products/graphic-polo-shirt/index.html",
-      "bytes": 14579,
-      "sha256": "bf6419e47dab7f571f992272a9b26c2447218329233ed49aaaa2525a0afb7ac3"
+      "bytes": 14583,
+      "sha256": "008d61bf6eeb4173ffca9942c0e3e923fc4515ab9fd0c58870ae7cf71445a0ae"
     },
     {
       "path": "docs/zh-cn/products/pink-wordmark-t-shirt/index.html",
-      "bytes": 13504,
-      "sha256": "3bfea80e5f7cadb8e4e991c87a39f8b5a548a5470bffe2918c654f448f065aed"
+      "bytes": 13821,
+      "sha256": "be1e17828f6456deb398fc8c6d6521e974acb4a67b23b814fe71798bb8d0373e"
     },
     {
       "path": "docs/zh-cn/products/rhinestone-shorts/index.html",
-      "bytes": 13596,
-      "sha256": "0e968cc72d8b89b7c605d8aea0968bb8400c297a9f28251253002030841b2982"
+      "bytes": 13600,
+      "sha256": "cec8d714451d7a1f0d08f3d7f2758fb836dcba7ed260c52eb768fdeb227ac3aa"
     },
     {
       "path": "docs/zh-cn/search/index.html",
-      "bytes": 49676,
-      "sha256": "63ccf90a0d6882a7fce1177111e017582b5049df99ee87a86ed81cc0555d0fff"
+      "bytes": 32638,
+      "sha256": "b6937465ced26816cf2c6480bd0bebbfa13e18c6f7038b05dd660fed39019a90"
     },
     {
       "path": "README.md",
-      "bytes": 1306,
-      "sha256": "8451b0c759af773875829a6e530fed9c9bb662d659b25e49ad81d3552ae16871"
+      "bytes": 1354,
+      "sha256": "c0ad3676863f591277010012f161e164165657ecb0bc07a42146ee4b1b50777e"
     },
     {
       "path": "theme/assets/archive-black-set-ai-v1.jpg",
@@ -910,6 +930,51 @@
       "path": "theme/assets/archive-design-kb-front.jpg",
       "bytes": 100106,
       "sha256": "38fca4d9a12a2f6cce45d7bc0319c85d7d82b1012ff02e5082d4145932cfb6ae"
+    },
+    {
+      "path": "theme/assets/archive-mockup-a-v3.webp",
+      "bytes": 78404,
+      "sha256": "40ca82481634a7eea6c66b5a17b91f6ed5aeb9c351f4b532803b1ef37066dfde"
+    },
+    {
+      "path": "theme/assets/archive-mockup-ab-v3.webp",
+      "bytes": 60396,
+      "sha256": "cf3a9c8bef81e1deef7dcbe64e7a81acfa9c4ea196d9452bab04ccfa088fe249"
+    },
+    {
+      "path": "theme/assets/archive-mockup-cb-v3.webp",
+      "bytes": 76680,
+      "sha256": "164aab7a36fe88625cb00d694de6cdbd6ebf4167e13f692e4a2bd2b2d20b66bc"
+    },
+    {
+      "path": "theme/assets/archive-mockup-d-v3.webp",
+      "bytes": 83290,
+      "sha256": "d2e7fddd0a163a9abd78fd522612bf216bb48b64c8eed18b1d02ef85081be04b"
+    },
+    {
+      "path": "theme/assets/archive-mockup-db-v3.webp",
+      "bytes": 55252,
+      "sha256": "12b01cec6e0c4d5f25762e81bbe8c938c7ceec9da30f51e396d33bbaa8dff7f3"
+    },
+    {
+      "path": "theme/assets/archive-mockup-eb-v3.webp",
+      "bytes": 71978,
+      "sha256": "337825f396e6baffb860d54f98b9eba276170c2b94326ec638390160e093248b"
+    },
+    {
+      "path": "theme/assets/archive-mockup-g-v3.webp",
+      "bytes": 80874,
+      "sha256": "2b819a9969b2bf4f0b1c22e69f3c4663f7ea482e0e10968244595516b1074261"
+    },
+    {
+      "path": "theme/assets/archive-mockup-i-v3.webp",
+      "bytes": 59680,
+      "sha256": "954b032c0152e07d539cdeed9c8cdd79b5bd9b48db34816bf90ae7859506d069"
+    },
+    {
+      "path": "theme/assets/archive-mockup-j-v3.webp",
+      "bytes": 55956,
+      "sha256": "3861ce06d50231755760083194cedf72ff2ae501a56aa92c401cae7cc0b99d64"
     },
     {
       "path": "theme/assets/archive-motion-poster-v1.jpg",
@@ -1193,8 +1258,8 @@
     },
     {
       "path": "theme/assets/exodus.js",
-      "bytes": 7847,
-      "sha256": "a40fcfe4af556a64d26831631255b475f4a57b21477531f632a644be7abe3bed"
+      "bytes": 8279,
+      "sha256": "75a11a44382296e6e4c242a27446b865f720e2eb731ed08223ab1d39ae151d4c"
     },
     {
       "path": "theme/assets/golden-girdle-LICENSE.txt",
@@ -1213,13 +1278,38 @@
     },
     {
       "path": "theme/assets/identity.js",
-      "bytes": 8177,
-      "sha256": "be4287c20517b840d85e96c137cc5978c184567cae6d6d6af452799f9d63bd34"
+      "bytes": 10451,
+      "sha256": "f7103c6dc8d268f5f4271437e1b00fc99ef37157ed313c4f69085ced7bfe2d5c"
     },
     {
       "path": "theme/assets/image-viewer.js",
       "bytes": 5811,
       "sha256": "746083adf5bb7f4fb31ad0ec4a5e7fbfe2c074f26a893799c06545ec9753eb3b"
+    },
+    {
+      "path": "theme/assets/lena-street-1.webp",
+      "bytes": 372308,
+      "sha256": "ca52d04ab0c9913323756cfe3d9b70e0d553b8b40e0ea0a7147212571eacda7e"
+    },
+    {
+      "path": "theme/assets/lena-street-13.webp",
+      "bytes": 822944,
+      "sha256": "f934fa6be246a7eb0f333350f9fcc2f7cbe2a1c8282974ff45aa7d0b31b922fb"
+    },
+    {
+      "path": "theme/assets/lena-street-15.webp",
+      "bytes": 426646,
+      "sha256": "0a5b1415ef6ad60f1e8fb8d8b2304945cc4882f5326e95fee65d89917d77b14d"
+    },
+    {
+      "path": "theme/assets/lena-street-7.webp",
+      "bytes": 779030,
+      "sha256": "9bc4ec10704082c0aeeae8808a370a146f3daf0b9612af84855e33b0165300d4"
+    },
+    {
+      "path": "theme/assets/lena-street-9.webp",
+      "bytes": 695848,
+      "sha256": "79354113d4b0c076c4d25ffe6074882a30066a2874bae75ff9814fa94ae5e0c3"
     },
     {
       "path": "theme/assets/model-viewer-LICENSE.txt",
@@ -1258,13 +1348,13 @@
     },
     {
       "path": "theme/assets/retail.css",
-      "bytes": 21309,
-      "sha256": "0ea8063c3a1fe7c6158a92722f2112e0a407ca4ddab6bc12e40f8b92959ffc3a"
+      "bytes": 25555,
+      "sha256": "9d2def57fd4a385b1af337a92c2719ebb432317894174f06ca69b2076166fa07"
     },
     {
       "path": "theme/assets/sample-catalog.js",
-      "bytes": 3787,
-      "sha256": "07990357d37f847ba4142ee68023e601ebfd1b040d8c3e2250d895ff855e61f0"
+      "bytes": 4822,
+      "sha256": "8901194c3c2336c00480674b05c5c601cd35125e7b63ece6c67bfbe9e993f2ae"
     },
     {
       "path": "theme/assets/sample-detail.jpg",
@@ -1323,13 +1413,13 @@
     },
     {
       "path": "theme/locales/en.default.json",
-      "bytes": 28215,
-      "sha256": "972c26b0e8d02db1205e7dae72f8d5140f6bc4036464344a57d04d6eaa70de9c"
+      "bytes": 28755,
+      "sha256": "e3e45e24ebf87f77f5cdcf8c051857e31f8a536c3350d959d55cae6e097923d3"
     },
     {
       "path": "theme/locales/zh-CN.json",
-      "bytes": 26456,
-      "sha256": "445dcf906a67c881705be96d8318566bcc3fd3332e103f6419613e328a312b1d"
+      "bytes": 26970,
+      "sha256": "ef3338be776fb702480f9d3e7df1e100a31304e4a735d0287e96336771d885b4"
     },
     {
       "path": "theme/sections/about.liquid",
@@ -1353,8 +1443,8 @@
     },
     {
       "path": "theme/sections/home.liquid",
-      "bytes": 4430,
-      "sha256": "6cc376bfed5284ef0237bbe422ad51e2a8fc6319be25f505289261388e7f6240"
+      "bytes": 5435,
+      "sha256": "618323ed547e3f3df3efefcbefdc8e181946a53fcdde3eec5180afcc302364d1"
     },
     {
       "path": "theme/sections/lookbook.liquid",
@@ -1378,8 +1468,8 @@
     },
     {
       "path": "theme/sections/main-product.liquid",
-      "bytes": 3088,
-      "sha256": "74a5e61878bc78039f044e59c00d25ca6ab9b24d8cdc3db157f1ffc17bf72d8f"
+      "bytes": 3529,
+      "sha256": "e6279e3e38c52a9776b2c849a98750687f52ddba7245d37912bd4a5a2450d1ec"
     },
     {
       "path": "theme/sections/main-search.liquid",
@@ -1468,13 +1558,13 @@
     },
     {
       "path": "theme/snippets/sample-grid-card.liquid",
-      "bytes": 1500,
-      "sha256": "b9d095637fc2e3d3ee92b79d1e376b9cd06f0b39463e377b8154549dca690fcb"
+      "bytes": 1881,
+      "sha256": "c819b1c856518d2132817c16f06a7629d209bf47e1b4980ba6a2c49c2b73dff5"
     },
     {
       "path": "theme/snippets/sample-grid.liquid",
-      "bytes": 16755,
-      "sha256": "043d40a3d0547bec046c9c38726e136d0d9dee389c33895c59f898d51f5453fe"
+      "bytes": 21659,
+      "sha256": "f4645792c858f1ef3d5db702c898471009f36472814fe8a5739284834b0148c8"
     },
     {
       "path": "theme/snippets/seo-meta.liquid",
@@ -1543,8 +1633,8 @@
     },
     {
       "path": "tools/sync-github.py",
-      "bytes": 7769,
-      "sha256": "26fce131bce38f8ed54e4bbe5e7bff06f6f907995391f6afb3db031f9d636ad7"
+      "bytes": 7817,
+      "sha256": "c758dbf08aaef21bde2581d854e1e1abaf214947e63108a0b3742b56ead7383e"
     }
   ]
 }

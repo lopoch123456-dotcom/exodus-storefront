@@ -18,10 +18,22 @@
     <p data-object-status role="status" aria-live="polite">{{ 'identity.object_note' | t | escape }}</p>
     <noscript><p>{{ 'identity.nojs' | t | escape }}</p></noscript>
   </div>
-  <figure class="identity-sample">
-    <a href="{{ routes.root_url }}pages/sample-notes"><img src="{{ 'sample-detail.jpg' | asset_url }}" width="1200" height="1800" alt="{{ 'ui.alt_detail' | t | escape }}" loading="lazy"></a>
-    <figcaption>{{ 'ui.hood_title' | t | escape }}</figcaption>
-  </figure>
+  <section class="hero-carousel" data-street-carousel aria-label="{{ 'street.label' | t | escape }}">
+    <div class="street-frames">
+      {% assign street_photos = '1,13,9,7,15' | split: ',' %}
+      {% for photo in street_photos %}
+      <a class="street-frame" data-street-frame href="{{ routes.root_url }}pages/lookbook"{% unless forloop.first %} hidden{% endunless %}>
+        <img src="{{ 'lena-street-' | append: photo | append: '.webp' | asset_url }}" width="1400" height="2000" alt="{{ 'street.alt' | t | escape }}"{% if forloop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="street-caption"><span>{{ 'street.caption' | t | escape }}</span><span data-street-count>01 / 05</span></div>
+    <div class="street-controls" data-street-controls hidden>
+      <button type="button" data-street-previous aria-label="{{ 'street.previous' | t | escape }}">&#8592;</button>
+      <button type="button" data-street-play data-play-label="{{ 'street.play' | t | escape }}" data-pause-label="{{ 'street.pause' | t | escape }}" aria-pressed="false">{{ 'street.pause' | t | escape }}</button>
+      <button type="button" data-street-next aria-label="{{ 'street.next' | t | escape }}">&#8594;</button>
+    </div>
+  </section>
 </section>
 <section class="retail-collection section-pad" id="Collection"><div class="retail-heading"><h2>{{ 'retail.collection_title' | t | escape }}</h2><a class="retail-text-link" href="{{ routes.all_products_collection_url }}">{{ 'retail.view_all' | t | escape }} ↗</a></div>{% if settings.sample_mode %}<p class="retail-availability">{{ 'retail.preview_note' | t | escape }}</p>{% render 'sample-grid', routes: routes, card_limit: 4 %}{% else %}<div class="product-grid commerce-grid">{% for product in collections.all.products limit: 4 %}{% render 'product-card', product: product %}{% endfor %}</div>{% endif %}</section>
 <section class="retail-detail"><a class="retail-detail-image" href="{{ routes.root_url }}pages/sample-notes"><img src="{{ 'sample-detail.jpg' | asset_url }}" width="1200" height="1800" loading="lazy" alt="{{ 'ui.alt_detail' | t | escape }}"></a><div class="retail-detail-copy"><img class="retail-cutout" src="{{ 'original-graphic-exitway-dark.png' | asset_url }}" width="285" height="245" loading="lazy" alt=""><p class="eyebrow">EXODUS</p><h2>{{ 'retail.detail_title' | t | escape }}</h2><p>{{ 'retail.detail_copy' | t | escape }}</p><a class="retail-text-link" href="{{ routes.root_url }}pages/sample-notes">{{ 'retail.view_piece' | t | escape }} ↗</a></div></section>

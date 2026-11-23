@@ -8,6 +8,8 @@ document.querySelectorAll('[data-sample-catalog][data-catalog-scope="all"]').for
  const seriesSelect=controls.querySelector('[data-catalog-series]');
  const count=controls.querySelector('[data-catalog-count]');
  const empty=controls.querySelector('[data-catalog-empty]');
+ const selectedColors=new Map();
+ const familyOf=card=>card.dataset.family||card.dataset.url;
  const searchPage=/\/search\/?$/.test(location.pathname);
  const searchInput=section.querySelector('input[name="q"]');
  const allowed=new Set(categoryButtons.map(b=>b.dataset.catalogCategory));
@@ -32,10 +34,16 @@ document.querySelectorAll('[data-sample-catalog][data-catalog-scope="all"]').for
  function apply(){
   let total=0;const hasQuery=String(state.query||'').trim().length>0;
   const terms=normalize(state.query).split(' ').filter(Boolean);
+  const grouped=new Map();
   cards.forEach(card=>{
-   const show=(state.category==='all'||card.dataset.category===state.category)&&(state.series==='all'||card.dataset.series===state.series)&&(!hasQuery||(terms.length>0&&terms.every(term=>matchesTerm(searchIndex.get(card),term))));
-   card.hidden=!show;if(show)total++;
+   card.hidden=true;
+   const eligible=(state.category==='all'||card.dataset.category===state.category)&&(state.series==='all'||card.dataset.series===state.series)&&(!hasQuery||(terms.length>0&&terms.every(term=>matchesTerm(searchIndex.get(card),term))));
+   if(eligible){const family=familyOf(card);if(!grouped.has(family))grouped.set(family,[]);grouped.get(family).push(card);}
   });
+  for(const [family,matching] of grouped){
+   const chosen=matching.find(card=>card.id===selectedColors.get(family))||matching.find(card=>location.hash==='#'+card.id)||matching[0];
+   chosen.hidden=false;total++;
+  }
   categoryButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.catalogCategory===state.category)));
   seriesSelect.value=state.series;
   if(searchInput)searchInput.value=state.query;
@@ -57,6 +65,17 @@ document.querySelectorAll('[data-sample-catalog][data-catalog-scope="all"]').for
   (searchInput || categoryButtons.find(button=>button.dataset.catalogCategory==='all'))?.focus();
  });
  window.addEventListener('popstate',()=>{read();apply();});
+ grid.addEventListener?.('click',event=>{
+  const button=event.target.closest('[data-color-choice]');
+  if(!button)return;
+  const target=cards.find(card=>card.id===button.dataset.colorChoice);
+  if(!target)return;
+  const family=familyOf(target);
+  selectedColors.set(family,target.id);
+  // An explicit swatch choice may override a color word in the current search.
+  cards.filter(card=>familyOf(card)===family).forEach(card=>{card.hidden=card!==target;});
+  target.closest('.catalog-card-slot')?.querySelector('[data-color-choice="'+target.id+'"]')?.focus();
+ });
  read();apply();
  const returnedCard = cards.find(card => !card.hidden && location.hash === '#' + card.id);
  returnedCard?.scrollIntoView({block:'nearest'});

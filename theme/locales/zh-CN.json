@@ -504,7 +504,8 @@
     "denim_original_front": "样衣实拍，正面全貌。",
     "denim_original_graphic": "样衣实拍，裤腿外侧印花近景。",
     "hood_actual_closeup": "样衣近景，展示帽边毛领、胸前图案与拉链。",
-    "flametee_actual_layered": "样衣实拍，展示胸前黑红印花。露出的长袖来自内搭的华夫格亨利衫。"
+    "flametee_actual_layered": "样衣实拍，展示胸前黑红印花。露出的长袖来自内搭的华夫格亨利衫。",
+    "henley_lena": "Lena 穿着白色华夫格 Henley 的真实街拍"
   },
   "catalog_look": {
     "show": "看上身",
@@ -515,5 +516,23 @@
     "loading": "正在加载上身预览",
     "error": "上身图暂不可用，可再次点按重试。",
     "design": "AI 设计概念"
+  },
+  "catalog_colors": {
+    "white": "白色",
+    "black": "黑色",
+    "cream": "奶油色",
+    "olive": "橄榄绿",
+    "sand": "沙色",
+    "beige": "米色",
+    "label": "颜色"
+  },
+  "street": {
+    "label": "Lena 街拍",
+    "alt": "Lena 穿着 Exodus 样衣的户外街拍",
+    "previous": "上一张",
+    "next": "下一张",
+    "pause": "暂停轮播",
+    "play": "播放轮播",
+    "caption": "街头实拍 / Lena"
   }
 }
