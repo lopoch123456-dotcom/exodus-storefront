@@ -41,7 +41,13 @@ document.querySelectorAll('[data-sample-catalog][data-catalog-scope="all"]').for
    if(eligible){const family=familyOf(card);if(!grouped.has(family))grouped.set(family,[]);grouped.get(family).push(card);}
   });
   for(const [family,matching] of grouped){
-   const chosen=matching.find(card=>card.id===selectedColors.get(family))||matching.find(card=>location.hash==='#'+card.id)||matching[0];
+   // Keep an explicitly chosen color on reload/language change, including a
+   // swatch that overrides a color word in search. Category/series still apply.
+   const preferred=cards.filter(card=>familyOf(card)===family&&
+    (state.category==='all'||card.dataset.category===state.category)&&
+    (state.series==='all'||card.dataset.series===state.series));
+   const chosen=preferred.find(card=>location.hash==='#'+card.id)||
+    preferred.find(card=>card.id===selectedColors.get(family))||matching[0];
    chosen.hidden=false;total++;
   }
   categoryButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.catalogCategory===state.category)));
@@ -72,6 +78,10 @@ document.querySelectorAll('[data-sample-catalog][data-catalog-scope="all"]').for
   if(!target)return;
   const family=familyOf(target);
   selectedColors.set(family,target.id);
+  // replaceState preserves the current position and does not add a history step.
+  const colorURL=new URL(location.href);
+  colorURL.hash=target.id;
+  history.replaceState(history.state,'',colorURL.pathname+colorURL.search+colorURL.hash);
   // An explicit swatch choice may override a color word in the current search.
   cards.filter(card=>familyOf(card)===family).forEach(card=>{card.hidden=card!==target;});
   target.closest('.catalog-card-slot')?.querySelector('[data-color-choice="'+target.id+'"]')?.focus();

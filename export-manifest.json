@@ -1,5 +1,5 @@
 {
-  "date_vancouver": "2026-11-23",
+  "date_vancouver": "2026-11-24",
   "source": "Current native Shopify theme",
   "pages": 56,
   "approved_theme_media": 95,
@@ -24,7 +24,7 @@
     {
       "path": "docs/404.html",
       "bytes": 8883,
-      "sha256": "05663274796eeac2d5ad9c19a3ae7ce858954c7c8e03e03fd6af4cc6c42cbd7b"
+      "sha256": "15f73adb7715d446577ca9405389537d4ceea2555b111077e0b1845ae0fff747"
     },
     {
       "path": "docs/assets/archive-black-set-ai-v1.jpg",
@@ -523,8 +523,8 @@
     },
     {
       "path": "docs/assets/sample-catalog.js",
-      "bytes": 4822,
-      "sha256": "8901194c3c2336c00480674b05c5c601cd35125e7b63ece6c67bfbe9e993f2ae"
+      "bytes": 5437,
+      "sha256": "24685e8416e4e86c2f8d413197c51131e13b85b645532af029b9de9000e811cc"
     },
     {
       "path": "docs/assets/sample-detail.jpg",
@@ -569,42 +569,42 @@
     {
       "path": "docs/cart/index.html",
       "bytes": 8940,
-      "sha256": "5982de1e29472969dfa2a10684a6aabe09f653347f68c1b965865ca24eae8589"
+      "sha256": "e9dccf1f2f36e5cf58d0963c44cd1f9058a45a186891bd4d2d5f6bdf704c6012"
     },
     {
       "path": "docs/collections/all/index.html",
       "bytes": 32670,
-      "sha256": "ab39ff7095d09bc21f49d93c95f708cfb48b85fcc80131d26ac7b29722e1a52e"
+      "sha256": "c5a94f3cd8d3b056a3ca8bd28e962a5faf1d747dabe569d8ef7a94ab005c87bb"
     },
     {
       "path": "docs/index.html",
       "bytes": 20367,
-      "sha256": "6f47e5411a84f4719cde0e43e1827f9fe33326c0df42ae73571e2e3cdb581730"
+      "sha256": "5a34658f11c761e56d0b9d0715285223a13db45ec847fa3508eec114355ac6c3"
     },
     {
       "path": "docs/pages/about/index.html",
       "bytes": 9197,
-      "sha256": "82d4e4fd15b2d5f55ad2ba7c29eadbfcc218864b804c389bd2a673a13219826d"
+      "sha256": "a31dcf115369da84af72730c1b2a22241f802eb19981921be91719035be2c308"
     },
     {
       "path": "docs/pages/contact/index.html",
       "bytes": 9444,
-      "sha256": "c06e582291193088ca17bcaede2fc09b9f054c6cd835e9811693b7843cb26c68"
+      "sha256": "6ad1c76149af03db7a45904587011adc710e9432ae5a17c0432cca298887d520"
     },
     {
       "path": "docs/pages/lookbook/index.html",
       "bytes": 13083,
-      "sha256": "8bcc45fdb091a6aba89907f9159b617af48c345e762e9cb3a56f2632def199c4"
+      "sha256": "a252f5743684fd42770f0dcaf2d3610f723ba9bb415dfa09fd2c1b12b2eb3eaf"
     },
     {
       "path": "docs/pages/product-notes/index.html",
       "bytes": 12868,
-      "sha256": "3574d2d6d9627a453e1d7b60cd78111c183566914a48fe5d2d058251d5c1e7a7"
+      "sha256": "ee38fa18197f5b5da43a318a79c57435c23a2cced604f85ec9f2c8999e7aeb0f"
     },
     {
       "path": "docs/pages/sample-notes/index.html",
       "bytes": 10051,
-      "sha256": "8a160772edcef7d6e23cb0ef52bfa3d64fceaa7a5ed8b02e84ee072c9c65ed23"
+      "sha256": "2ee3ac73837a33221a4248c247e455b00f355a8f8c35ea71ccb1d322cde377b5"
     },
     {
       "path": "docs/preview-only.js",
@@ -614,92 +614,92 @@
     {
       "path": "docs/products/archive-a/index.html",
       "bytes": 13753,
-      "sha256": "70a8ff17f27dac1b852880d380d15745b81175f115f1ebf45c43ba1fb5ddcce9"
+      "sha256": "fedb7beeb05a070a0df82a66b011b222d4ee7fc0884438d1b1b5235ec084c9c8"
     },
     {
       "path": "docs/products/archive-ab/index.html",
       "bytes": 13600,
-      "sha256": "b20b40b3e5e63ddb732875af65c68da5aeb8f1646900272c41d41c2bde4c850c"
+      "sha256": "d0687274dccd7755f830804f4f9912c367ada162702707cbc3b3ab310e0aece5"
     },
     {
       "path": "docs/products/archive-cb/index.html",
       "bytes": 13494,
-      "sha256": "9171f7bef47a2c4584fc181458953b78318a96b3928de7e57058ed8c977dba1e"
+      "sha256": "28c501669e3316dabb90b17f1fb563c40d8d07e20da71d5e194fb653706d856f"
     },
     {
       "path": "docs/products/archive-cream-pink-shorts/index.html",
       "bytes": 12878,
-      "sha256": "9a400e7974465be550c10e5204459196650c9bd8c5232e416ae4f359817a01bc"
+      "sha256": "430ab2985359ea5ba5d87abe2bc063f122259e7060a849a814a283d7ab16e048"
     },
     {
       "path": "docs/products/archive-d/index.html",
       "bytes": 13584,
-      "sha256": "553cedb9b98deaf7e6dbda1a150cb2574abf57cda0ad2a90f4cf9aa31a85013d"
+      "sha256": "de9ba1d0501b78f96a10545a3aa53b61fdb14c3d29bc981018246bbd07c15f8d"
     },
     {
       "path": "docs/products/archive-db/index.html",
       "bytes": 13612,
-      "sha256": "23c3d849d0e2981e4d459823725d413f9b10820f5eb786271896af9810661a24"
+      "sha256": "949522cba8c0b87e97181b27436ee4bf6b71279c60d52e51aae1cf8d32bd23a1"
     },
     {
       "path": "docs/products/archive-eb/index.html",
       "bytes": 13708,
-      "sha256": "c2237743bf37f4eaf4739c11b993da16c42cec90d2c63d3717aa796967c4fc93"
+      "sha256": "6ef527c2551a99bc00cccc70e2c9e819dd0799fa2b89c1a320aa04d12a7c36e5"
     },
     {
       "path": "docs/products/archive-g/index.html",
       "bytes": 13321,
-      "sha256": "54785a5012c6f9f275fe304575ac1430454ef256057efacbf550b058a11f537e"
+      "sha256": "995b829363344df33c1916e74482632683ba6a488074a94c3f6abb2f1cd212bb"
     },
     {
       "path": "docs/products/archive-i/index.html",
       "bytes": 13285,
-      "sha256": "43a325c34b9f7a169fe6a1bcd605918b33828f7a41e5cb5271d12bb50f36a7d8"
+      "sha256": "79c6c8a30c8d2c577c98d092845c1e9a677416205bf6fd241ba10bfaf244bf0e"
     },
     {
       "path": "docs/products/archive-j/index.html",
       "bytes": 13273,
-      "sha256": "66920bdbb19d9f1627ecd6aa58229564ddabf982a40159b8fc5db3362d4d46ee"
+      "sha256": "fea722d423f7b1d2435266fb05c70344c3aee89a2bf591712ed2be9bca85b024"
     },
     {
       "path": "docs/products/decalogue-waffle-henley/index.html",
       "bytes": 17013,
-      "sha256": "13625d98c49f696af0ca9dd7313dbfa8ee52a0ef714aa6fcf8535b9d5aa52c1f"
+      "sha256": "06df7faec189608f3f65adf746c45959223cce74b009fd3b484ee89da3cabf7c"
     },
     {
       "path": "docs/products/flame-graphic-white-t-shirt/index.html",
       "bytes": 12786,
-      "sha256": "13db1e18a31d8750464ccb96b52a4a8e160798e0d2ace1d309eea176f6e8c2d8"
+      "sha256": "2e7a1da919b885f82d14971861ea712b391ed1829b6a4db14883b08d343f75a8"
     },
     {
       "path": "docs/products/floral-zip-hoodie/index.html",
       "bytes": 13677,
-      "sha256": "6c4550de96e6af49f8a2c13e0580797c12a41be3c0f61e95627851f958e64c64"
+      "sha256": "a0b2e0d5b5dd64226afaa661b324e54088477f6b41bc4b59b5bf8e9f76a4a7f0"
     },
     {
       "path": "docs/products/graphic-black-shorts/index.html",
       "bytes": 15616,
-      "sha256": "8cd06ee8e054e20427c66925c70ebc987d6564050e916eaf026ce84c5fb37c4e"
+      "sha256": "3e9b58a9e0f897f48eb7a260a22457aa4e3ab32e84241d0c7a91523c34cef4b2"
     },
     {
       "path": "docs/products/graphic-denim-trousers/index.html",
       "bytes": 14868,
-      "sha256": "e1a53fb5175dd8bc8e6a1a11fb37a4427080ee4dfd29abc5335e46b9e731770c"
+      "sha256": "8dfef2af06f60ec72f8ef1e60a7b12c0f3f0a04ad1df4a47975da806f86c3973"
     },
     {
       "path": "docs/products/graphic-polo-shirt/index.html",
       "bytes": 15005,
-      "sha256": "1ffbf039b147ceedf330afa8eadc45f2a94873b02b8ebf137829835552481eb1"
+      "sha256": "4efeae3e7f43064ef3c2a43375edc55fca1813290754fe1cebb8ef2d71e37a50"
     },
     {
       "path": "docs/products/pink-wordmark-t-shirt/index.html",
       "bytes": 14104,
-      "sha256": "764fec6b50f8c4c521cd89f50db00b656e03113108002efd58f57b47e5cb0c3a"
+      "sha256": "c51b4148474e29f11c3d483a1f882566c027799e42deea61b30a9fb997946fcc"
     },
     {
       "path": "docs/products/rhinestone-shorts/index.html",
       "bytes": 13948,
-      "sha256": "fcbd6bf11d83af7f20d181801eed7d503231c737177a1d013c3a97ccab3fc38a"
+      "sha256": "4965bdaa533d5b9a245de77106cc712cb5c035ba8ef9248ec966f9520294ac79"
     },
     {
       "path": "docs/robots.txt",
@@ -709,147 +709,147 @@
     {
       "path": "docs/search/index.html",
       "bytes": 32935,
-      "sha256": "2e47b9ef92fd41a06edd7768946c90185aea099f29913a896f398d04a7095e9f"
+      "sha256": "40e1a6dd43fd06a4da812de6ffbf06d73452e9bef4d25c6611f2c0c1540f045c"
     },
     {
       "path": "docs/zh-cn/404.html",
       "bytes": 8869,
-      "sha256": "ec78568834a042976f7266b7de1bbe555854aec93228fb091d0623d36fb607f1"
+      "sha256": "464ee9161ce4da1ea480cb4d416f67b9f089a2cb2a216553459674f50083925f"
     },
     {
       "path": "docs/zh-cn/cart/index.html",
       "bytes": 8906,
-      "sha256": "757c07bca768fb2ce8bb6c1881fbb82773e08bef393345c3d60c66a3a6924f06"
+      "sha256": "9cd3487656a8ea4e17d58070bc63c1712865174bee8edd45247625f78a1957c6"
     },
     {
       "path": "docs/zh-cn/collections/all/index.html",
       "bytes": 32549,
-      "sha256": "61f30c4c5109144dea59724cad3657f060c8aa86cecc2495675f0d38c11f7d53"
+      "sha256": "5468f595e2c701ed8b7009e504d37b33571cb455e0b76f845c3275398d7ddf96"
     },
     {
       "path": "docs/zh-cn/index.html",
       "bytes": 20275,
-      "sha256": "44a4c8e2674de2fdf5aaf1b87b0da474134dca9170f2b7446cebae5cfb6c0d21"
+      "sha256": "86693b1eefcba58d4e450e189811284a0555113b16ca989c342750e84eca7329"
     },
     {
       "path": "docs/zh-cn/pages/about/index.html",
       "bytes": 9108,
-      "sha256": "e31da5972c12f75c48e22cb071ed86b0a87cb73c78a0d80a41bc36baaaafd1ec"
+      "sha256": "99674f82f7c6b207f624f3087a553a946f6c138f622594940f9e730dd89a2380"
     },
     {
       "path": "docs/zh-cn/pages/contact/index.html",
       "bytes": 9416,
-      "sha256": "65857350d2e2e157b47623673cfd70fa93083ec81e27043bbfd883858eb1a9f2"
+      "sha256": "890810b864e41fc9d207df9f24433ed24411f0b61d38fa35f78402d506553cb2"
     },
     {
       "path": "docs/zh-cn/pages/lookbook/index.html",
       "bytes": 12975,
-      "sha256": "44483392c0e678975a36e737e3b10ef230f82b176232f2468d2a601d179fa223"
+      "sha256": "f2c7268e961605f246ca543cc031dffbb3acc04a460641c5e94f6aafaa9794f9"
     },
     {
       "path": "docs/zh-cn/pages/product-notes/index.html",
       "bytes": 12745,
-      "sha256": "fff866d1d7c926cafcbf7ff06da003917676e8f6b414b39a41ef59946e371df4"
+      "sha256": "a53cfed30d826571cce4db54869ebe2ef27bf2e2a655870ad273f8440ceccc49"
     },
     {
       "path": "docs/zh-cn/pages/sample-notes/index.html",
       "bytes": 10002,
-      "sha256": "8008fd2ed782768a18a5a846f8fb29daea7b40a0575e4e20e08a413e8fcb898d"
+      "sha256": "526fdc18ac5f0ab26958ce80d72312a4780c975b60c5b6b6c2b03a264c92e4d2"
     },
     {
       "path": "docs/zh-cn/products/archive-a/index.html",
       "bytes": 13648,
-      "sha256": "f230459338eec33ebc0ce7eec64fb55f5adad9c8ba6ac9d15063e564b5017833"
+      "sha256": "fa6a2e4488993858ece56a7cb9926dedb8093374d358edbc65e2e4c3ba0ba373"
     },
     {
       "path": "docs/zh-cn/products/archive-ab/index.html",
       "bytes": 13480,
-      "sha256": "fbb5fa812708fc2a79e9a06ae46dbc31481be593424dc26c702a430af29d8264"
+      "sha256": "7bfe514d981c06a1086186dd8f875861487feafb478816b8c7dbd46c0b26bc09"
     },
     {
       "path": "docs/zh-cn/products/archive-cb/index.html",
       "bytes": 13383,
-      "sha256": "dd536d925cbe049d47b6bfff60fac505f7a4b215f1ae5e5e8994a3430eee5a07"
+      "sha256": "5ef50e5f41820a0b5d28cf54ac7c18726949ba66ce887cb1c2d11ff92ae0f7dc"
     },
     {
       "path": "docs/zh-cn/products/archive-cream-pink-shorts/index.html",
       "bytes": 12788,
-      "sha256": "668a895a86806bba5535b98a2b8649b9526e61c18aa7767a0d164caf3fc88840"
+      "sha256": "171298b3ee3a901cd250916540dd70fea630794ff86226eaa034946a18f82f30"
     },
     {
       "path": "docs/zh-cn/products/archive-d/index.html",
       "bytes": 13416,
-      "sha256": "8f10cdb7d0cbf96c19f3016576d98e18bec86028297fa29d7ff8b75911585191"
+      "sha256": "715b3f91ed695764ad2b960bdcc54429e54ec0999891fb7ba31a5a4217b04636"
     },
     {
       "path": "docs/zh-cn/products/archive-db/index.html",
       "bytes": 13444,
-      "sha256": "886e25ab4fffbcdaa2ca42e00a4284c6c55f7cc3d3b8d4a0c930ee4d01e34e3f"
+      "sha256": "5dea759230032b7d1af4be2cd3c97251ba327c37f9d4e06b1249f1eafba7be74"
     },
     {
       "path": "docs/zh-cn/products/archive-eb/index.html",
       "bytes": 13504,
-      "sha256": "5df109f532710fe1673303f3d010ce0de97f801ead7490845ef8430c3e4ac520"
+      "sha256": "7ca4dfda59ed105f6e0dd74cf44c8f8bea6b6e4e6a2dddf82be9e622af86cee7"
     },
     {
       "path": "docs/zh-cn/products/archive-g/index.html",
       "bytes": 13163,
-      "sha256": "c260bce02103feeb9e28f1d077a3974a81c6ab50598800723b95eb7620d49cd7"
+      "sha256": "526791f92e30ff9bcce28a829f7b3802a9fa9c74c79ca6fcca8085d519817161"
     },
     {
       "path": "docs/zh-cn/products/archive-i/index.html",
       "bytes": 13163,
-      "sha256": "9306f2241aeea303e1ba2e38d07117e945d88a4afa782aaab94030d6b792b9cd"
+      "sha256": "cba5aca6f156f6264395afd4c9987f4b64b1d40bd356f7c707068c16a1f02e4b"
     },
     {
       "path": "docs/zh-cn/products/archive-j/index.html",
       "bytes": 13163,
-      "sha256": "14766b49b3872249ac57f20912caa339785d7405a42a7f67c6fd482baceb571d"
+      "sha256": "6a5e13d60c5ca3682c4b1f76fc3e1c0e240f715be510d9b991635231c933e80a"
     },
     {
       "path": "docs/zh-cn/products/decalogue-waffle-henley/index.html",
       "bytes": 16756,
-      "sha256": "69eb758b4b50e35552c3810e26a32982ad405d41cf6eb4525b96e89a2e004bbd"
+      "sha256": "c91a820ecfc7b4aa7cf69a2cb122ddb325b4ac369d58bcd5fb83478a8aafbbe9"
     },
     {
       "path": "docs/zh-cn/products/flame-graphic-white-t-shirt/index.html",
       "bytes": 12526,
-      "sha256": "4eda0fd0eec30a0d99254e9dc92184586fe9d7ad48e9d4daa56d92c856d59594"
+      "sha256": "e8c4949a6e91791a233064a46dd37716830d785ea2f08335cd55d92a77fab02d"
     },
     {
       "path": "docs/zh-cn/products/floral-zip-hoodie/index.html",
       "bytes": 13553,
-      "sha256": "201c2fe020f8e3f149dff85e7f4226c1d7ef53dcc7e1fd23042d055c771229af"
+      "sha256": "079ee0e284654326103b726aae318059d20e9f67c79fb32cb5370188a2c5f13e"
     },
     {
       "path": "docs/zh-cn/products/graphic-black-shorts/index.html",
       "bytes": 15328,
-      "sha256": "1780d1b331ecf8d57b05dd7157d3d9d7637e95c2374711d8babbaad4470db9aa"
+      "sha256": "547d56928caaa5c009f545e540f8041b07dbf411d7927bb14d6df2db7e63bf26"
     },
     {
       "path": "docs/zh-cn/products/graphic-denim-trousers/index.html",
       "bytes": 14749,
-      "sha256": "f81fa8ca3ff53a85f2906b821038f8e46294a9f60ce756083bdef6ee2e3f76fd"
+      "sha256": "98da85a55ebc19fdeb0106f9629a34c9a926d1567d0ac49ab5a9fffe48c821f9"
     },
     {
       "path": "docs/zh-cn/products/graphic-polo-shirt/index.html",
       "bytes": 14703,
-      "sha256": "2444ca20a50116b5ba359eca47bd8d07dbc7bc5c48753c75665629c83cc65d1a"
+      "sha256": "987859f8e2b52f365ac8d8dbb206e26138f11502708f4877438527028d1733e8"
     },
     {
       "path": "docs/zh-cn/products/pink-wordmark-t-shirt/index.html",
       "bytes": 13941,
-      "sha256": "ec39b6093aa744c00a227f0d9175f8eba1083d63a43f0930f0e42301f4942fac"
+      "sha256": "b8084b16efcfdf9cb63b5c7417dd025b9d85a5f97adcdee8a7231b4a7dafb484"
     },
     {
       "path": "docs/zh-cn/products/rhinestone-shorts/index.html",
       "bytes": 13720,
-      "sha256": "aff4cfc50e1bfbe1f2248637eb9372413295e37ec4daf1faeb068f7e9043d4e2"
+      "sha256": "900e0a41bb0d65425ecea9723f98877e9b0e2fe1b5fa9f649651ba226ec123f9"
     },
     {
       "path": "docs/zh-cn/search/index.html",
       "bytes": 32827,
-      "sha256": "b33c1466221f56e70e3aca475e76f0f92f209672dd34e7838f6ec4b953387a75"
+      "sha256": "4ba4a20a88ce98ae0e396e720289fff3ad1b5ff062483279552806b5f440dad1"
     },
     {
       "path": "README.md",
@@ -1353,8 +1353,8 @@
     },
     {
       "path": "theme/assets/sample-catalog.js",
-      "bytes": 4822,
-      "sha256": "8901194c3c2336c00480674b05c5c601cd35125e7b63ece6c67bfbe9e993f2ae"
+      "bytes": 5437,
+      "sha256": "24685e8416e4e86c2f8d413197c51131e13b85b645532af029b9de9000e811cc"
     },
     {
       "path": "theme/assets/sample-detail.jpg",
