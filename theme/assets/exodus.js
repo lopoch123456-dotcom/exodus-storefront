@@ -82,9 +82,17 @@ document.querySelectorAll('[data-product-gallery]').forEach(gallery => {
   const frames = [...gallery.querySelectorAll('[data-gallery-frame]')];
   const rail = gallery.querySelector('.gallery-thumbnails');
   const thumbs = [...gallery.querySelectorAll('[data-gallery-thumb]')];
-  function select(id) {
-    if (!frames.some(frame => frame.dataset.galleryFrame === String(id))) return;
-    frames.forEach(frame => { frame.hidden = frame.dataset.galleryFrame !== String(id); });
+  function select(id, remember = false) {
+    const selectedFrame = frames.find(frame => frame.dataset.galleryFrame === String(id));
+    if (!selectedFrame) return;
+    if (remember) {
+      // Preserve the photograph across refresh/language changes without a scroll
+      // jump or extra Back step. Keep the existing collection/search context.
+      const url = new URL(location.href);
+      url.hash = selectedFrame.id;
+      history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+    }
+    frames.forEach(frame => { frame.hidden = frame !== selectedFrame; });
     const selectedThumb = thumbs.find(thumb => thumb.dataset.galleryThumb === String(id));
     thumbs.forEach(thumb => {
       if (thumb === selectedThumb) thumb.setAttribute('aria-current', 'true');
@@ -100,7 +108,7 @@ document.querySelectorAll('[data-product-gallery]').forEach(gallery => {
     const thumb = event.target.closest('[data-gallery-thumb]');
     if (!thumb || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
-    select(thumb.dataset.galleryThumb);
+    select(thumb.dataset.galleryThumb, true);
   });
   gallery.addEventListener('keydown', event => {
     const thumb = event.target.closest('[data-gallery-thumb]');
@@ -111,10 +119,14 @@ document.querySelectorAll('[data-product-gallery]').forEach(gallery => {
     if (event.key === 'Home') index = 0;
     else if (event.key === 'End') index = thumbs.length - 1;
     else index = (index + (event.key === 'ArrowRight' ? 1 : -1) + thumbs.length) % thumbs.length;
-    select(thumbs[index].dataset.galleryThumb);
+    select(thumbs[index].dataset.galleryThumb, true);
     thumbs[index].focus();
   });
   gallery.addEventListener('product:image', event => select(event.detail));
+  window.addEventListener('hashchange', () => {
+    const linked = frames.find(frame => location.hash === '#' + frame.id);
+    if (linked) select(linked.dataset.galleryFrame);
+  });
   const linkedFrame = frames.find(frame => location.hash === '#' + frame.id);
   const variantImageId = gallery.closest('.product-layout')?.querySelector('[data-product-variant] option:checked')?.dataset.imageId;
   const variantFrame = frames.find(frame => frame.dataset.galleryFrame === variantImageId);
